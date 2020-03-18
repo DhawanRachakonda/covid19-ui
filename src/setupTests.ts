@@ -3,3 +3,9 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
+import { render } from './test-utils';
+
+global.generateSnapshot = (Component: any) => {
+  const { container } = render(Component);
+  expect(container).toMatchSnapshot();
+};

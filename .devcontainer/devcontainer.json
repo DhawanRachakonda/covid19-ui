@@ -1,9 +1,9 @@
 {
-  "name": "Rect Dev Camp 2020 🎉 😄",
+  "name": "Save Doc 🎉 😄",
   "dockerFile": "Dockerfile",
   "appPort": [3000, 3003],
   //"forwardPorts": [3000, 3003],
-  "runArgs": ["-u", "node", "--env-file", "devcontainer.env"],
+  "runArgs": ["-u", "node", "--env-file", "./devcontainer.env"],
   "containerUser": "node",
   "settings": {
     "workbench.colorTheme": "Night Owl",
@@ -13,7 +13,8 @@
     "editor.formatOnSave": true,
 
     "prettier.requireConfig": true,
-    "eslint.enable": true
+    "eslint.enable": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "postCreateCommand": "export ZSH_THEME=powerlevel9k/powerlevel9k && npm install && cd express-server && npm install",
   "extensions": [

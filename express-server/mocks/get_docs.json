@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "docName": "Medical Bill 🏥",
+    "docBadges": ["Medical", "medical 2020", "IT Submmission"],
+    "docImages": []
+  },
+  {
+    "id": "2",
+    "docName": "Travel Bill - Bangalore 🏢 💻",
+    "docBadges": ["Travel", "Travel 2020", "IT Submmission", "Bangalore"],
+    "docImages": []
+  },
+  {
+    "id": "3",
+    "docName": "Travel Bill - Goa 😍💕",
+    "docBadges": ["Travel", "Honeymoon 2020", "Goa"],
+    "docImages": []
+  },
+  {
+    "id": "4",
+    "docName": "Visa Renew - 2020 ✈",
+    "docBadges": ["Visa", "Visa renew 2020"],
+    "docImages": []
+  },
+  {
+    "id": "5",
+    "docName": "Passport",
+    "docBadges": ["Passport", "Identity card"],
+    "docImages": []
+  }
+]

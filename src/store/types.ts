@@ -1,0 +1,18 @@
+export enum EReduxActionTypes {
+  FETCH_DOCS = 'FETCH_DOCS',
+  SET_DOCS = 'SET_DOCS',
+  SET_FETCH_DOCS_ERROR = 'SET_ERROR',
+
+  SET_USER_LOGGED_IN = 'USER_LOGGED_IN',
+  FETCH_USER = 'FETCH_USER',
+  LOGOUT_USER = 'LOGOUT_USER',
+  REGISTER_USER = 'REGISTER_USER',
+  REGISTERING_USER = 'REGISTERING_USER',
+  SET_USER_ERROR = 'SET_USER_ERROR',
+  REGISTER_USER_ERROR = 'REGISTER_USER_ERROR'
+}
+
+export interface IReduxBaseAction {
+  type: EReduxActionTypes;
+  payload: any;
+}

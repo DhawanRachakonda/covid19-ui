@@ -3,26 +3,24 @@ import 'react-app-polyfill/stable';
 
 import React from 'react';
 import { render } from 'react-dom';
+import { IntlProvider } from 'react-intl';
+import { Provider } from 'react-redux';
+
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import App from './App';
 import messages from './common/lang/messages';
-
-const ReactBootCamp = () => {
-  return (
-    <div>
-      <FormattedHTMLMessage id="app.welcomeMessage" />
-    </div>
-  );
-};
+import { configureStore } from './store/storeConfig';
 
 render(
-  <IntlProvider
-    locale={navigator.language}
-    messages={(messages as any)[navigator.language]}
-  >
-    <ReactBootCamp />
-  </IntlProvider>,
+  <Provider store={configureStore()}>
+    <IntlProvider
+      locale={navigator.language}
+      messages={(messages as any)[navigator.language]}
+    >
+      <App />
+    </IntlProvider>
+  </Provider>,
   document.getElementById('root')
 );
 

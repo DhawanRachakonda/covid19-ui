@@ -1,0 +1,7 @@
+.component-spinner {
+    left: 50%;
+    margin-left: -2em;
+    position: absolute;
+    top: 50%;
+    margin-top: -2em;
+}
