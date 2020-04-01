@@ -3,7 +3,7 @@ import { Spinner } from 'react-bootstrap';
 
 import './component-loader.css';
 
-import AppTemplate from '../Template';
+import AppTemplate from '../AppTemplate';
 
 export function ComponentLoader() {
   return (

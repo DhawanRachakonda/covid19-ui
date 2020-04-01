@@ -1,5 +1,5 @@
 {
-  "name": "Save Doc 🎉 😄",
+  "name": "COVID-19 🏥",
   "dockerFile": "Dockerfile",
   "appPort": [3000, 3003],
   //"forwardPorts": [3000, 3003],

@@ -1,13 +1,9 @@
 import paths from './paths';
 import { lazy } from 'react';
 
-const UserAccess = lazy(() => import('../common/components/useraccess'));
-const LoginPage = lazy(() => import('../common/components/useraccess/login'));
-const RegistrationPage = lazy(() =>
-  import('../common/components/useraccess/registration')
-);
+const AdminPage = lazy(() => import('../common/components/admin'));
 const PageNotFound = lazy(() => import('../common/components/page_not_found'));
-const ViewDocPage = lazy(() => import('../common/components/docs'));
+const Home = lazy(() => import('../common/components/home'));
 
 export default [
   // {
@@ -26,20 +22,12 @@ export default [
   // },
   {
     path: '/',
-    Component: UserAccess,
+    Component: Home,
     exact: true
   },
   {
-    path: paths.login.path,
-    Component: LoginPage
-  },
-  {
-    path: paths.registration.path,
-    Component: RegistrationPage
-  },
-  {
-    path: paths.viewDocs.path,
-    Component: ViewDocPage
+    path: paths.admin.path,
+    Component: AdminPage
   },
   {
     path: '*',

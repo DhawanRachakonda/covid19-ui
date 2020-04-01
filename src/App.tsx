@@ -1,23 +1,30 @@
 import React, { Suspense } from 'react';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-datepicker/dist/react-datepicker.css';
 
 import routes from './routes/routesconfig';
 
 import { ComponentLoader } from './common/components/loaders';
+import AppTemplate from './common/components/AppTemplate';
+import { AppProvider } from './common/components/home/AppContext';
 
 function AppEntry() {
   return (
-    <Router>
-      <Suspense fallback={<ComponentLoader />}>
-        <Switch>
-          {routes.map((route, i) => (
-            <RouteWithSubRoutes key={i} {...route} />
-          ))}
-        </Switch>
-      </Suspense>
-    </Router>
+    <AppProvider>
+      <AppTemplate>
+        <Router>
+          <Suspense fallback={<ComponentLoader />}>
+            <Switch>
+              {routes.map((route, i) => (
+                <RouteWithSubRoutes key={i} {...route} />
+              ))}
+            </Switch>
+          </Suspense>
+        </Router>
+      </AppTemplate>
+    </AppProvider>
   );
 }
 

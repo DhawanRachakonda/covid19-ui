@@ -1,0 +1,12 @@
+.search-bar {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+  
+.search-bar.fixed-top {
+    margin-top: unset;
+}
+
+.margin-left--2 {
+    margin-left: 2rem;
+}

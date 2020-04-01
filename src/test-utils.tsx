@@ -2,12 +2,9 @@ import React from 'react';
 import { render as rtlRender } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
-import { createStore, Store, AnyAction, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import thunkMiddleWare from 'redux-thunk';
 import { IntlProvider } from 'react-intl';
 
-import { rootReducer, AppState } from './store/rooReducerConfig';
 import messages from './common/lang/messages';
 
 import getUser from './mocks/post_login.json';
@@ -19,7 +16,7 @@ interface IRouterProps {
 
 interface IStateProps {
   initialState?: any;
-  store?: Store<AppState, AnyAction>;
+  store?: any;
 }
 
 function createInitialState() {
@@ -66,12 +63,8 @@ export function withRouter({
 
 export function withProvider({
   initialState = createInitialState(),
-  store = createStore(
-    rootReducer,
-    initialState,
-    applyMiddleware(...[thunkMiddleWare])
-  )
-}: IStateProps = {}) {
+  store
+}: any) {
   const container = (component: JSX.Element) => (
     <Provider store={store}>{component}</Provider>
   );
@@ -85,11 +78,7 @@ export function withRouterAndProvider({
   route = '/',
   history = createMemoryHistory({ initialEntries: [route] }),
   initialState = createInitialState(),
-  store = createStore(
-    rootReducer,
-    initialState,
-    applyMiddleware(...[thunkMiddleWare])
-  )
+  store
 }: IStateProps & IRouterProps = {}) {
   const { container: wrapHistory, history: memHistory } = withRouter({
     route,

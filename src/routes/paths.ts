@@ -1,16 +1,13 @@
 export default {
-  login: {
-    routeLink: 'login',
-    link: '/#login',
-    path: '/login'
+  admin: {
+    routeLink: 'admin',
+    link: '/admin',
+    path: '/admin'
   },
-  registration: {
-    link: '/#registration',
-    path: '/registration'
+  home: {
+    routeLink: '',
+    link: '/',
+    path: '/',
+    exact: true
   },
-  viewDocs: {
-    routeLink: 'docs',
-    link: '/#docs',
-    path: '/docs'
-  }
 };
