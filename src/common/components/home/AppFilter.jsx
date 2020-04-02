@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Form, Button, Row, Col } from 'react-bootstrap';
 import DatePicker from 'react-datepicker';
+import AppRTG from '../report/AppRTG';
 
 import './AppFilter.css';
 
@@ -161,6 +162,14 @@ function AppFilter({ id = 'search-bar' }) {
       type: 'UNSET_OPACITY_FOR_MAP'
     });
   };
+  const showRTGModal = (e) => {
+    dispatch({
+      type: 'SHOW_RTG',
+      payload: {
+        value: true
+      }
+    });
+  };
 
   const { selectedUser, selectedDate } = useAppFormState();
 
@@ -239,6 +248,11 @@ function AppFilter({ id = 'search-bar' }) {
             <Button type="reset" onClick={reset} className="margin-left--2">
               Reset
             </Button>
+            <Button type="button" onClick={showRTGModal} className="rtg-button">
+              Report To Govt.
+            </Button>
+
+            <AppRTG />
           </Form.Group>
         </Row>
       </Form>
