@@ -33,3 +33,8 @@ code {
 .opacity-05 {
   opacity: 0.5;
 }
+
+.full-screen--exit:hover,
+.full-screen:hover {
+  cursor: pointer;
+}

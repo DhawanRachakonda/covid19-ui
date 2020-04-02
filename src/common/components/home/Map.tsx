@@ -11,6 +11,8 @@ import {
 import { Card } from 'react-bootstrap';
 import { DivIcon } from 'leaflet';
 
+import MapControl from './MapControl';
+
 const RedIcon = new DivIcon({
   html: `<svg class="bi bi-circle-fill" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
   <circle cx="8" cy="8" r="8"/>
@@ -162,6 +164,7 @@ function MapView() {
             />
           </LayersControl.BaseLayer>
         </LayersControl>
+        <MapControl />
       </Map>
     </React.Fragment>
   );
