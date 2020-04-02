@@ -5,6 +5,9 @@ import DatePicker from 'react-datepicker';
 import './AppFilter.css';
 
 import { useAppDispatch, useAppFormState } from './AppContext';
+import SuccessToaster, { FailureToaster } from '../toaster/SuccessToaster';
+
+const SCALAR_E7 = 0.0000001;
 
 function AppFilter({ id = 'search-bar' }) {
   const [isFixed, setFixedTop] = React.useState(false);
@@ -59,6 +62,106 @@ function AppFilter({ id = 'search-bar' }) {
     });
   };
 
+  const [isFetchingVisitPlaces, setIsFetchingVisitPlaces] = React.useState(
+    false
+  );
+
+  const [errorObject, setErrorObject] = React.useState({
+    isErrorOccurred: false,
+    errorMessage: ''
+  });
+
+  const uploadVisitedPlaces = React.useCallback(
+    (e) => {
+      dispatch({
+        type: 'RESET_PLACES_VISITED'
+      });
+      setIsFetchingVisitPlaces(true);
+      const file = e.currentTarget.files[0];
+      var reader = new FileReader();
+      reader.readAsText(file, 'UTF-8');
+      reader.onload = function(evt) {
+        try {
+          const { timelineObjects = [] } = JSON.parse(evt.target.result);
+          const placesVisited = timelineObjects.map((object, index) => {
+            const {
+              placeVisit = { location: { name: '' }, duration: {} }
+            } = object;
+            let reportedOn = '';
+            if (
+              placeVisit.duration.startTimestampMs &&
+              !isNaN(Number(placeVisit.duration.startTimestampMs))
+            ) {
+              const reportedDateTime = new Date(
+                Number(placeVisit.duration.startTimestampMs)
+              );
+              // Format : DD-MM-YYYY
+              const date = `0${reportedDateTime.getDate()}`.slice(-2);
+              const month = `0${reportedDateTime.getMonth() + 1}`.slice(-2);
+              reportedOn = `${date}-${month}-${reportedDateTime.getFullYear()}`;
+            }
+            return {
+              latitude: placeVisit.location.latitudeE7
+                ? placeVisit.location.latitudeE7 * SCALAR_E7
+                : 0,
+              longitude: placeVisit.location.longitudeE7
+                ? placeVisit.location.longitudeE7 * SCALAR_E7
+                : 0,
+              addressName: placeVisit.location.address
+                ? `${placeVisit.location.name}\n${placeVisit.location.address}`
+                : '',
+              dateField: reportedOn,
+              id: placeVisit.location.placeId + index
+            };
+          });
+          dispatch({
+            type: 'SET_PLACES_VISITED',
+            payload: {
+              data: placesVisited
+            }
+          });
+        } catch (error) {
+          setErrorObject({
+            isErrorOccurred: true,
+            errorMessage: error.message
+          });
+          setTimeout(
+            () => setErrorObject({ isErrorOccurred: false, errorMessage: '' }),
+            3000
+          );
+        }
+        setIsFetchingVisitPlaces(false);
+      };
+      reader.onerror = function(evt) {
+        setIsFetchingVisitPlaces(false);
+        setErrorObject({
+          isErrorOccurred: true,
+          errorMessage: 'error Reading File'
+        });
+        setTimeout(
+          () => setErrorObject({ isErrorOccurred: false, errorMessage: '' }),
+          3000
+        );
+      };
+    },
+    [dispatch]
+  );
+
+  const setOpacity = () => {
+    dispatch({
+      type: 'SET_OPACITY_FOR_MAP',
+      payload: {
+        value: 'opacity-05'
+      }
+    });
+  };
+
+  const unSetOpacity = () => {
+    dispatch({
+      type: 'UNSET_OPACITY_FOR_MAP'
+    });
+  };
+
   const { selectedUser, selectedDate } = useAppFormState();
 
   return (
@@ -70,6 +173,12 @@ function AppFilter({ id = 'search-bar' }) {
       bg="dark"
       variant="dark"
     >
+      {isFetchingVisitPlaces && (
+        <SuccessToaster message="app.isFetchingVisitPlaces" />
+      )}
+      {errorObject.isErrorOccurred && (
+        <FailureToaster message={errorObject.errorMessage} />
+      )}
       <Form inline>
         <Row>
           <Form.Group controlId="exampleForm.SelectCustom">
@@ -103,6 +212,23 @@ function AppFilter({ id = 'search-bar' }) {
                 className="form-control"
                 selected={selectedDate}
                 onChange={(date) => setSelectedDate(date)}
+                onCalendarOpen={setOpacity}
+                onCalendarClose={unSetOpacity}
+                maxDate={new Date()}
+              />
+            </Col>
+          </Form.Group>
+          <Form.Group id="upload-attachment-input">
+            <Col>
+              <Form.Label className="text-color--white">
+                Upload Visited Places
+              </Form.Label>
+            </Col>
+            <Col>
+              <Form.Control
+                type="file"
+                onChange={uploadVisitedPlaces}
+                accept=".json"
               />
             </Col>
           </Form.Group>

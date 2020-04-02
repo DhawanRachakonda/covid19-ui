@@ -8,9 +8,12 @@ const initialState = {
   selectedDate: new Date(),
   filter: {
     user: '',
-    date: ''
+    date: '',
+    dateStr: ''
   },
-  infectedList: []
+  infectedList: [],
+  placesVisited: [],
+  opacityClassName: ''
 };
 
 function AppReducer(state, action) {
@@ -27,19 +30,25 @@ function AppReducer(state, action) {
       };
     case 'RESET':
       return {
+        ...state,
         selectedUser: '',
         selectedDate: new Date(),
         filter: {
           user: '',
-          date: ''
+          date: '',
+          dateStr: ''
         }
       };
     case 'APPLY_FILTER':
+      const date = `0${state.selectedDate.getDate()}`.slice(-2);
+      const month = `0${state.selectedDate.getMonth() + 1}`.slice(-2);
+      const dateStr = `${date}-${month}-${state.selectedDate.getFullYear()}`;
       return {
         ...state,
         filter: {
           user: state.selectedUser,
-          date: state.selectedDate
+          date: state.selectedDate,
+          dateStr
         }
       };
     case 'SET_INFECTED_LIST':
@@ -47,6 +56,32 @@ function AppReducer(state, action) {
         ...state,
         infectedList: action.payload.data
       };
+
+    case 'SET_PLACES_VISITED':
+      return {
+        ...state,
+        placesVisited: action.payload.data
+      };
+
+    case 'RESET_PLACES_VISITED':
+      return {
+        ...state,
+        placesVisited: []
+      };
+
+    case 'SET_OPACITY_FOR_MAP': {
+      return {
+        ...state,
+        opacityClassName: action.payload.value
+      };
+    }
+
+    case 'UNSET_OPACITY_FOR_MAP': {
+      return {
+        ...state,
+        opacityClassName: ''
+      };
+    }
 
     default:
       return state;

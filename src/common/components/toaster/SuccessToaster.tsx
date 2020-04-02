@@ -24,4 +24,26 @@ function SuccessToaster({ message }: ISuccessToaster) {
   );
 }
 
+interface IFailureToaster {
+  message: string;
+}
+
+export function FailureToaster({ message }: IFailureToaster) {
+  return (
+    <Toast
+      style={{
+        position: 'absolute',
+        top: 0,
+        right: 0
+      }}
+      animation={true}
+      delay={3000}
+    >
+      <Toast.Body>
+        <span>{message}</span>
+      </Toast.Body>
+    </Toast>
+  );
+}
+
 export default SuccessToaster;
