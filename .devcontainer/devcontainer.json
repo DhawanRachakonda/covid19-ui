@@ -33,6 +33,7 @@
     "hazer.ReactCodeSnippets",
     "vaughan.rdoc-readme",
     "mikestead.dotenv",
-    "msjsdiag.debugger-for-chrome"
+    "msjsdiag.debugger-for-chrome",
+    "streetsidesoftware.code-spell-checker"
   ]
 }
