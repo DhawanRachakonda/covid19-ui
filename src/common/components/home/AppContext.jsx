@@ -15,45 +15,48 @@ const initialState = {
         user:'',
         date:'',
     },
+	infectedList: [], 
     loginUserName: '',
     loginUserEmail: '',
     showRTG: false,
     reportCase: new ReportCase(),
 };
 
-function AppReducer(
-    state,
-    action
-  ) {
+function AppReducer(state, action) {
     switch (action.type) {
-      
-        case "SET_USER":
+    case 'SET_USER':
             return {
                 ...state,
                 selectedUser: action.payload.value
-            }
-        case "SET_DATE":
+      };
+    case 'SET_DATE':
             return {
                 ...state,
-                selectedDate: action.payload.value,
-            }
-        case "RESET":
+        selectedDate: action.payload.value
+      };
+    case 'RESET':
             return {
                 selectedUser: '',
                 selectedDate: new Date(),
                 filter: {
                     user:'',
-                    date:'',
+          date: ''
                 }
-            }
-        case "APPLY_FILTER":
+      };
+    case 'APPLY_FILTER':
             return {
                 ...state,
                 filter: {
                     user: state.selectedUser,
-                    date: state.selectedDate,
+          date: state.selectedDate
                 }
-            }
+      };
+    case 'SET_INFECTED_LIST':
+      return {
+        ...state,
+        infectedList: action.payload.data
+      };
+
         case "SHOW_RTG":
             return {
                 ...state,
@@ -103,4 +106,4 @@ function AppReducer(
     return context;
   }
   
-  export { AppProvider, useAppFormState, useAppDispatch };
+export { AppProvider, useAppFormState, useAppDispatch };

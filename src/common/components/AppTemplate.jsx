@@ -7,7 +7,7 @@ function AppTemplate({children}) {
     return (
         <React.Fragment>
             <Navbar bg="dark" variant="dark" id="app-header">
-                <Navbar.Brand href="#home">COVID-19</Navbar.Brand>
+        <Navbar.Brand href="/">COVID-19</Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link href="/admin">Admin Page</Nav.Link>
                 </Nav>
@@ -16,11 +16,9 @@ function AppTemplate({children}) {
                     <AppLogin/>
                 </Navbar.Text>
             </Navbar>
-            <Container>
-                {children}
-            </Container>
+      <Container>{children}</Container>
         </React.Fragment>
-    )
+  );
 }
 
 export default AppTemplate;
