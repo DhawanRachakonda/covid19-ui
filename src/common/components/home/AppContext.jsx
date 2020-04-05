@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+import ReportCase from '../model/ReportCase';
+
+
 const AppStateContext = React.createContext(
     undefined
   );
@@ -11,7 +14,11 @@ const initialState = {
     filter: {
         user:'',
         date:'',
-    }
+    },
+    loginUserName: '',
+    loginUserEmail: '',
+    showRTG: false,
+    reportCase: new ReportCase(),
 };
 
 function AppReducer(
@@ -47,6 +54,22 @@ function AppReducer(
                     date: state.selectedDate,
                 }
             }
+        case "SHOW_RTG":
+            return {
+                ...state,
+                showRTG: action.payload.value
+            }
+        case "CLEAR_REPORT_CASE":
+              return {
+                  ...state,
+                  reportCase: new ReportCase(),
+              }
+        case "SET_USER_DETAILS_IN_RTG":
+              return {
+                ...state,
+                loginUserName: action.payload.nameValue,
+                loginUserEmail: action.payload.emailValue
+              }
       default:
         return state;
     }

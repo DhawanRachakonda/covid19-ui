@@ -1,6 +1,8 @@
 import React from 'react';
 import {Nav, Navbar, Container} from 'react-bootstrap';
 
+import AppLogin from './login/AppLogin';
+
 function AppTemplate({children}) {
     return (
         <React.Fragment>
@@ -9,6 +11,10 @@ function AppTemplate({children}) {
                 <Nav className="mr-auto">
                     <Nav.Link href="/admin">Admin Page</Nav.Link>
                 </Nav>
+                <Navbar.Text style={{float:'right', paddingTop: '0rem'}}>
+                    {/* Added for Google Login functionality */}
+                    <AppLogin/>
+                </Navbar.Text>
             </Navbar>
             <Container>
                 {children}
