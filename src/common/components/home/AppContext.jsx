@@ -9,14 +9,17 @@ const AppStateContext = React.createContext(
 const AppDispatchContext = React.createContext(undefined);
 
 const initialState = {
-    selectedUser: '',
-    selectedDate: new Date(),
-    filter: {
-        user:'',
-        date:'',
-    },
-	infectedList: [], 
-    loginUserName: '',
+  selectedUser: '',
+  selectedDate: new Date(),
+  filter: {
+    user: '',
+    date: '',
+    dateStr: ''
+  },
+  infectedList: [],
+  placesVisited: [],
+  opacityClassName: '',
+  loginUserName: '',
     loginUserEmail: '',
     showRTG: false,
     reportCase: new ReportCase(),
@@ -35,21 +38,27 @@ function AppReducer(state, action) {
         selectedDate: action.payload.value
       };
     case 'RESET':
-            return {
-                selectedUser: '',
-                selectedDate: new Date(),
-                filter: {
-                    user:'',
-          date: ''
-                }
+      return {
+        ...state,
+        selectedUser: '',
+        selectedDate: new Date(),
+        filter: {
+          user: '',
+          date: '',
+          dateStr: ''
+        }
       };
     case 'APPLY_FILTER':
-            return {
-                ...state,
-                filter: {
-                    user: state.selectedUser,
-          date: state.selectedDate
-                }
+      const date = `0${state.selectedDate.getDate()}`.slice(-2);
+      const month = `0${state.selectedDate.getMonth() + 1}`.slice(-2);
+      const dateStr = `${date}-${month}-${state.selectedDate.getFullYear()}`;
+      return {
+        ...state,
+        filter: {
+          user: state.selectedUser,
+          date: state.selectedDate,
+          dateStr
+        }
       };
     case 'SET_INFECTED_LIST':
       return {
@@ -57,6 +66,31 @@ function AppReducer(state, action) {
         infectedList: action.payload.data
       };
 
+    case 'SET_PLACES_VISITED':
+      return {
+        ...state,
+        placesVisited: action.payload.data
+      };
+
+    case 'RESET_PLACES_VISITED':
+      return {
+        ...state,
+        placesVisited: []
+      };
+
+    case 'SET_OPACITY_FOR_MAP': {
+      return {
+        ...state,
+        opacityClassName: action.payload.value
+      };
+    }
+
+    case 'UNSET_OPACITY_FOR_MAP': {
+      return {
+        ...state,
+        opacityClassName: ''
+      };
+    }
         case "SHOW_RTG":
             return {
                 ...state,

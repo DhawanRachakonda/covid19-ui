@@ -25,3 +25,16 @@ code {
   background: none !important;
   border: none !important;
 }
+
+.text-color--white {
+  color: white;
+}
+
+.opacity-05 {
+  opacity: 0.5;
+}
+
+.full-screen--exit:hover,
+.full-screen:hover {
+  cursor: pointer;
+}

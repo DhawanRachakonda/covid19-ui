@@ -6,5 +6,1741 @@
     "addressName": "Unrecognized location",
     "name": "Unrecognized location",
     "id": "44e9c42b-0bc9-4041-8417-ff472e7e2203"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "26-03-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "36543ddb-195b-4cdb-96a0-7fd175a12e18"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "01-03-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "b8ad07dc-b2ab-41c3-a5e6-53a44ef66df1"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "4f2a81f9-feb8-49d9-8d69-aa7ed8444cdb"
+  },
+  {
+    "latitude": "17.3941099",
+    "longitude": "78.5099416",
+    "dateField": "01-03-2020",
+    "addressName": "2-2\n1107\n3, Tilak Nagar Rd\nPrashanti Nagar, New Nallakunta\nHyderabad, Telangana 500044\nभारत",
+    "name": "Tilak Nagar Hospital",
+    "id": "8c7a6ee3-6db7-4621-8f50-ea85a0c7e6bd"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "04c7fd01-561f-49d9-8b32-c90ff8fae4a0"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "01-03-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "2ae01884-2d65-492c-933a-4c2f220879cc"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "ffb0dd1f-bf23-472d-8240-12fb27ddbd5b"
+  },
+  {
+    "latitude": "17.3941099",
+    "longitude": "78.5099416",
+    "dateField": "01-03-2020",
+    "addressName": "2-2\n1107\n3, Tilak Nagar Rd\nPrashanti Nagar, New Nallakunta\nHyderabad, Telangana 500044\nभारत",
+    "name": "Tilak Nagar Hospital",
+    "id": "8aa4e965-2927-4e06-88f0-bb5fd26dfe45"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "02-03-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "dd00a237-d6ed-4662-90ad-97d44fdf5258"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "cc2ba511-984d-461d-8496-321552e7e2c4"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "02-03-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "17121c33-9aa4-42e1-acb3-f896042ffe53"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "f055e8ea-5835-4bc7-af8d-02229f63d308"
+  },
+  {
+    "latitude": "17.4203361",
+    "longitude": "78.3478118",
+    "dateField": "02-03-2020",
+    "addressName": "Unnamed Road Hyderabad\nFinancial District, Nanakram Guda\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Fine Food Court",
+    "id": "b442e116-5199-47b6-b20e-fea339a08abe"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "c4445686-f00f-4b89-b3c4-b561fd95a6e4"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "521ac130-40e7-4dcf-9a3f-0b30705b58f8"
+  },
+  {
+    "latitude": "17.3921523",
+    "longitude": "78.5122800",
+    "dateField": "05-03-2020",
+    "addressName": "2-2-1074/12\nBagh Amberpet, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "Sai Mitra Residency",
+    "id": "d5638833-0166-427c-9b98-e7ebbd543bb1"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "05-03-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "80fc7586-1d6e-461c-8186-3367623f7fcf"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "558c7cc7-308c-4c7f-97bc-f05075f8a4fa"
+  },
+  {
+    "latitude": "12.9835121",
+    "longitude": "77.6939240",
+    "dateField": "06-03-2020",
+    "addressName": "Laxmi Sagar Layout\n83\n2, Goshala Rd\nGarudachar Palya, Mahadevapura\nBengaluru, कर्नाटक 560048\nभारत",
+    "name": "Bagmane World Technology Center",
+    "id": "77e80966-0cbf-42f0-b6f9-ade90219c17c"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "3a039ee0-398c-4a2f-add9-0b273ff79345"
+  },
+  {
+    "latitude": "12.9505463",
+    "longitude": "77.6998917",
+    "dateField": "06-03-2020",
+    "addressName": "No: 90/6 Outer Ring Road\nService Rd\nopp. Onnovative Multiplex\nSri Balaji Layout, Chandra Layout, Marathahalli\nBengaluru, Karnataka 560037\nIndia",
+    "name": "Anjappar Chettinad A/C Restaurant",
+    "id": "0c300c2c-bece-4798-bf4e-7512e3c46091"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "e896185c-496f-4575-8e5f-020ee156429d"
+  },
+  {
+    "latitude": "12.9383227",
+    "longitude": "77.6310171",
+    "dateField": "06-03-2020",
+    "addressName": "#25,100 Ft Ring Road, Near Ejipura\nChandra Reddy Layout, Signal, Koramangala\nBengaluru, Karnataka 560047\nIndia",
+    "name": "Royaloak Furniture Koramangala",
+    "id": "f6920530-deca-4d6b-a1ee-03b54fa3bf51"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "fa8a8b10-399a-475c-b4ee-61ca78b074ed"
+  },
+  {
+    "latitude": "12.9083893",
+    "longitude": "77.6339481",
+    "dateField": "06-03-2020",
+    "addressName": "781, 24th Cross Rd\nSector 7, HSR Layout\nBengaluru, Karnataka 560102\nIndia",
+    "name": "781, 24th Cross Rd",
+    "id": "85faa247-241b-495f-a555-aaab1d0454d0"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "9b49dc32-2dac-4f7a-ac2d-6a2903a8d77c"
+  },
+  {
+    "latitude": "12.9078225",
+    "longitude": "77.6395216",
+    "dateField": "06-03-2020",
+    "addressName": "House No. 79\n1, 24th Cross Rd\nSector 3, HSR Layout\nBengaluru, Karnataka 560102\nIndia",
+    "name": "OYO 37042 Lavish Stay HSR Layout",
+    "id": "f910e376-ed03-4791-8857-194660c5af21"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "14cdc33d-537d-49b3-8cd6-f685dc4cbf91"
+  },
+  {
+    "latitude": "12.9121995",
+    "longitude": "77.6516981",
+    "dateField": "06-03-2020",
+    "addressName": "2318, 27th Main Rd\nPWD Quarters, 1st Sector, HSR Layout\nBengaluru, Karnataka 560102\nIndia",
+    "name": "Onesta HSR",
+    "id": "16a7d035-adda-4bd4-a339-4604ce19b89b"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "0025ec86-255e-4882-8556-bceea84ffe1b"
+  },
+  {
+    "latitude": "12.9078225",
+    "longitude": "77.6395216",
+    "dateField": "06-03-2020",
+    "addressName": "House No. 79\n1, 24th Cross Rd\nSector 3, HSR Layout\nBengaluru, Karnataka 560102\nIndia",
+    "name": "OYO 37042 Lavish Stay HSR Layout",
+    "id": "e897a282-13d7-4201-bd4c-35b9c2204b5c"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "549a230b-aafa-4d0e-91b1-bba5483b75a1"
+  },
+  {
+    "latitude": "12.9704252",
+    "longitude": "77.7126962",
+    "dateField": "07-03-2020",
+    "addressName": "Phase 2, Brookefield\nEPIP Zone, Brookefield\nBengaluru, Karnataka 560037\nIndia",
+    "name": "Mayura Sagar Restaurant",
+    "id": "ed117a8e-55cd-4f2c-ab79-14b943b52d6e"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "4d960798-1787-4bce-8d34-8dd752af66c8"
+  },
+  {
+    "latitude": "12.9673089",
+    "longitude": "77.7114052",
+    "dateField": "07-03-2020",
+    "addressName": "Kundalahalli Colony, Brookefield\nBengaluru, Karnataka 560037\nIndia",
+    "name": "Gopalan Millennium Habitat",
+    "id": "dca55c0d-97ed-473c-b115-4d4a9caacf4c"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "2624b976-d970-4542-b532-903b30236155"
+  },
+  {
+    "latitude": "13.0631216",
+    "longitude": "77.7404074",
+    "dateField": "07-03-2020",
+    "addressName": "Saviraj tower\nBudigere Rd\nnear Prestige Tranquility appartment\nBengaluru, Karnataka 560049\nIndia",
+    "name": "GrandPlus Hypermarket",
+    "id": "6cd62ecf-efa5-4bda-9e66-aad1e6f2e13d"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "192e2ff6-bbdc-44f3-85a9-01b32c4b56dc"
+  },
+  {
+    "latitude": "13.8074331",
+    "longitude": "77.6237801",
+    "dateField": "07-03-2020",
+    "addressName": "Lepakshi Rd\nAndhra Pradesh 515331\nIndia",
+    "name": "Cane kiss",
+    "id": "4bdcde43-2bfd-4ee5-bfc7-28aaa3c0792a"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "43356e73-e2d3-4710-b7b8-e2e3be68c08b"
+  },
+  {
+    "latitude": "14.1593123",
+    "longitude": "77.6093504",
+    "dateField": "07-03-2020",
+    "addressName": "Duddebanda, Andhra Pradesh 515164\nIndia",
+    "name": "Nvh India Ap",
+    "id": "258c38df-713a-4903-b0ff-1d56fce8235f"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "bc5605bb-aed1-450f-80f1-8b0ffa348a94"
+  },
+  {
+    "latitude": "15.8365758",
+    "longitude": "78.0408225",
+    "dateField": "07-03-2020",
+    "addressName": "Municipal Office Rd\nnear Appollo Hospital\nN R Peta\nKurnool, Andhra Pradesh 518004\nIndia",
+    "name": "Kurnool Municipal Corporation",
+    "id": "df39f795-8b61-4558-b65d-7a4e91b6fe3c"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "587bd690-9bbe-43de-9218-ea0b953cf832"
+  },
+  {
+    "latitude": "17.4033040",
+    "longitude": "78.4827210",
+    "dateField": "07-03-2020",
+    "addressName": "Himayat Nagar Rd\nDevi Laxmi Bagh, Domalguda, Himayatnagar\nHyderabad, Telangana 500029\nIndia",
+    "name": "Himayat Nagar",
+    "id": "ea1a434c-1a40-4d5e-935e-edf319979a9b"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "d0978363-c923-4ba4-9f16-44cd0cd19147"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "08-03-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "73492e45-e37d-4810-9ec6-6f187a31b564"
+  },
+  {
+    "latitude": "17.3892250",
+    "longitude": "78.4807358",
+    "dateField": "08-03-2020",
+    "addressName": "4-3-548, 14\nNeeds Arcade\nRamkoti, Sultan Bazar, Koti\nHyderabad, Telangana 500001\nIndia",
+    "name": "Mayur Pan House",
+    "id": "fdeedd8b-e340-41e8-bc1d-98d7c1618b6d"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "620473d5-bb14-453e-81da-1f6e1f8c4a84"
+  },
+  {
+    "latitude": "17.3903065",
+    "longitude": "78.4884937",
+    "dateField": "08-03-2020",
+    "addressName": "Maheshwari Parameshwari Towers\n4-2-27, Kachiguda X Rd\nBadichowdi, Rajamohallah, King Koti, Hyderguda\nHyderabad, Telangana 500027\nIndia",
+    "name": "BB - FC-HYDERABAD-KACHIGUDA X ROAD-PARAMESHWARI TOWERS",
+    "id": "2a8fbf69-e035-47d6-a412-71264ec92d5a"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "1b78441e-a222-4144-9e67-1319a49abce8"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "08-03-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "b379f4e1-e78d-44a0-8a1e-a1ccb2b20c05"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "68da8c8b-5622-4c0e-aa5d-d81648e2b708"
+  },
+  {
+    "latitude": "17.4214791",
+    "longitude": "78.3332541",
+    "dateField": "09-03-2020",
+    "addressName": "31 & 32,8th floor,Tower A,Ramki Selenium (Karvy\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Affluent Global Services Pvt Ltd",
+    "id": "ce54ca62-00ac-4d3f-a4f1-13756caef8dc"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "f1af1a7b-d167-4df9-8e3f-e6a6e2ac74ef"
+  },
+  {
+    "latitude": "17.4413120",
+    "longitude": "78.3592630",
+    "dateField": "09-03-2020",
+    "addressName": "135, Mumbai Hwy\nVinayak Nagar, Indira Nagar, Gachibowli\nHyderabad, Telangana 500032\nIndia",
+    "name": "Renuka Xerox",
+    "id": "e089baee-d83f-48ef-8ed5-1df3b38c2065"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "af3fc2db-5286-4e4e-9fdc-189ed0010e80"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "09-03-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "1a7d5c55-6294-454f-bd5e-39aa1f97b7a7"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "11-03-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "daadd192-23d9-4d94-b44c-e93c8ae6e743"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "9cde5d0d-3536-40b2-a9b7-39ec1344ab39"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "11-03-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "53b9ae42-d875-4aea-b8f1-373846656674"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "e25fb2f2-7ece-48c9-9a28-3f2bd3425813"
+  },
+  {
+    "latitude": "17.4006329",
+    "longitude": "78.5136071",
+    "dateField": "11-03-2020",
+    "addressName": "2-2-647\nA/1, Shivam Rd\nPrashanti Nagar, Bagh Amberpet, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "Fries and cones",
+    "id": "b5fbdaf1-1a8c-425b-bd43-b39c2d07d737"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "12-03-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "3d74c2ea-5dea-4245-ad4d-bf4f1afe6f4b"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "00df0643-5cf1-455c-a72c-76c0e40a630c"
+  },
+  {
+    "latitude": "17.4009661",
+    "longitude": "78.5605019",
+    "dateField": "14-03-2020",
+    "addressName": "Venkateswara Colony, Vijayapuri Colony, Uppal\nHyderabad, Telangana 500039\nIndia",
+    "name": "Uppal X Road L.B. Nagar",
+    "id": "2d16365d-9c2f-4269-9e58-1c5f5513d3d4"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "35a1454a-c98a-400b-8296-dfb4176ff7fa"
+  },
+  {
+    "latitude": "17.9806108",
+    "longitude": "79.5974547",
+    "dateField": "14-03-2020",
+    "addressName": "Sherpura\nWarangal, Telangana 506002\nIndia",
+    "name": "V Guard",
+    "id": "a06ef742-cf0a-4179-ace3-ccbe83d2bb47"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "19-03-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "a2a53c9e-eea5-42dd-a40f-3ac64ab35010"
+  },
+  {
+    "latitude": "17.3921523",
+    "longitude": "78.5122800",
+    "dateField": "20-03-2020",
+    "addressName": "2-2-1074/12\nBagh Amberpet, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "Sai Mitra Residency",
+    "id": "f78f7fa5-e98c-44a1-9a8a-f04793683dbb"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "26b9199c-ca53-4b3c-90dd-99535bd51c5d"
+  },
+  {
+    "latitude": "17.4046674",
+    "longitude": "78.5153734",
+    "dateField": "20-03-2020",
+    "addressName": "durga bai deshmukh colony, shivam road\nOsmania University Road\nIndraprasth Colony, DD Colony, Ranga Reddy Dist\nHyderabad, Telangana 500007\nIndia",
+    "name": "Heritage fresh",
+    "id": "adc28881-0789-4526-8908-242669adc835"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "d9e772cc-172a-457e-a004-63c3172ec7be"
+  },
+  {
+    "latitude": "17.4056930",
+    "longitude": "78.5115490",
+    "dateField": "20-03-2020",
+    "addressName": "1-9-670/A, S.V.E.S School Building, Adikmet Main Road, Vidya Nagar, Adikmet, Hyderabad, Andhra Pradesh 500044\nSRT Colony, Adikmet\nHyderabad, Telangana 500044\nIndia",
+    "name": "Rammy Fast Food",
+    "id": "90d6b81e-e2d2-4367-a4c7-396fda457e3a"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "e311fb53-ee7f-41c2-80a8-453eb0932455"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "26-03-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "30cc0ec9-d650-4735-a4b3-ea41c214283e"
+  },
+  {
+    "latitude": "17.3900331",
+    "longitude": "78.5167666",
+    "dateField": "26-03-2020",
+    "addressName": "Near Sree Ramana X Road, towards Dilsukhnagar, Near Saldana Gate of SAR/CPL\nPolice Quarters, Police Lines, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "Amberpet Police Station",
+    "id": "c7564fa6-ca7f-4ac5-83f7-20c01ef8cf51"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "26-03-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "a6fa26e3-9f01-4584-a83e-b33d73fecaf0"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "3099bf15-797c-4150-9805-8b5f5bc5ea1c"
+  },
+  {
+    "latitude": "17.4489198",
+    "longitude": "78.3831911",
+    "dateField": "01-02-2020",
+    "addressName": "7/A/2 Hitech City Rd Jaihind Enclave, Near Cyber Towers\nSilicon Valley, HITEC City\nHyderabad, Telangana 500081\nIndia",
+    "name": "Hitech City",
+    "id": "208388ef-c1e3-45b0-b64e-7e6ec5dcfe29"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "d3d8118c-eb57-4d66-bc54-212a3575f09c"
+  },
+  {
+    "latitude": "17.4513524",
+    "longitude": "78.3640368",
+    "dateField": "01-02-2020",
+    "addressName": "1-60/30/76/134, 1-60/30/77/134\nAnjaiah Nagar, Gachibowli\nHyderabad, Telangana 500081\nIndia",
+    "name": "Sub Registrar Office Serilingampally",
+    "id": "2c229c80-7f65-4b9a-a780-f1fec1457343"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "4efeb69a-4ff5-4d5d-8674-920e0efeb1ca"
+  },
+  {
+    "latitude": "17.4964542",
+    "longitude": "78.3729359",
+    "dateField": "01-02-2020",
+    "addressName": "Nadigada Tanda, Miyapur\nHyderabad, Telangana 500049\nIndia",
+    "name": "Miyapur Metro Station",
+    "id": "a7d9f682-f782-4628-9ec0-4cf7e44d5065"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "28eb80a0-f534-4181-968d-ea1d980fb0fa"
+  },
+  {
+    "latitude": "17.4282930",
+    "longitude": "78.5285577",
+    "dateField": "01-02-2020",
+    "addressName": "IRISET, Mettuguda\nSecunderabad, Telangana 500017\nIndia",
+    "name": "Tarnaka",
+    "id": "2ee15e2c-7a12-4bfb-8725-250ed1e66714"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "587fc910-bea4-4465-a0b2-07594ff8ac1d"
+  },
+  {
+    "latitude": "17.3920827",
+    "longitude": "78.5122788",
+    "dateField": "02-02-2020",
+    "addressName": "Unrecognized location",
+    "name": "Unrecognized location",
+    "id": "83561c07-0ae6-4edb-867d-9d760df82feb"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "9d7bbddd-02ce-4079-814b-3c0272b6eec8"
+  },
+  {
+    "latitude": "17.3921523",
+    "longitude": "78.5122800",
+    "dateField": "03-02-2020",
+    "addressName": "2-2-1074/12\nBagh Amberpet, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "Sai Mitra Residency",
+    "id": "6ccea629-71b8-413d-b0b1-25ee43d9eeb9"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "0112c04f-f588-4132-bf13-5ea1cf86d388"
+  },
+  {
+    "latitude": "17.4187033",
+    "longitude": "78.3441771",
+    "dateField": "03-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "27460410-3c04-401d-ab99-aa973a9db36e"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "7f97d4f0-fe4b-4ddf-bd3b-8f21f2a1979b"
+  },
+  {
+    "latitude": "17.4284517",
+    "longitude": "78.3268436",
+    "dateField": "03-02-2020",
+    "addressName": "Q City Rd\nGowlidoddy\nSerlingampally, Telangana 500075\nIndia",
+    "name": "Mee Seva",
+    "id": "0d73b57a-7908-47ad-a79d-0af8fd6ee000"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "2bd9a995-e99a-4b82-acff-2e4c40fa2c35"
+  },
+  {
+    "latitude": "17.4414997",
+    "longitude": "78.3599334",
+    "dateField": "03-02-2020",
+    "addressName": "Kallakuri Katyayani, 2-29, BESIDES SBI, Indranagar, Cellar Nandini Cafe(previously), Gatchibowli(V), Serilingampalle(M), Ranga Reddy(D\nOld Mumbai Hwy\nRajiv gandhi Nagar, Gachibowli\nHyderabad, Telangana 500032\nIndia",
+    "name": "MeeSeva Center",
+    "id": "a34d822c-3841-4478-8854-6fe3986c181c"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "c30d36c8-3fe3-4384-be2b-acd8dc0c7923"
+  },
+  {
+    "latitude": "17.4513524",
+    "longitude": "78.3640368",
+    "dateField": "03-02-2020",
+    "addressName": "1-60/30/76/134, 1-60/30/77/134\nAnjaiah Nagar, Gachibowli\nHyderabad, Telangana 500081\nIndia",
+    "name": "Sub Registrar Office Serilingampally",
+    "id": "707b54d6-a050-4289-8195-9dbedd3a1e2e"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "62585573-f87c-4d23-9db5-7c22a160b372"
+  },
+  {
+    "latitude": "17.4033040",
+    "longitude": "78.4827210",
+    "dateField": "03-02-2020",
+    "addressName": "Himayat Nagar Rd\nDevi Laxmi Bagh, Domalguda, Himayatnagar\nHyderabad, Telangana 500029\nIndia",
+    "name": "Himayat Nagar",
+    "id": "c045b9eb-ad50-44bc-801b-0a6cebbcb426"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "8d9947be-617e-4620-b83e-a4bd33dee1e9"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "5e2e79d0-bc53-4d54-8c5e-44c9ac0be5bb"
+  },
+  {
+    "latitude": "17.3920827",
+    "longitude": "78.5122788",
+    "dateField": "03-02-2020",
+    "addressName": "Unrecognized location",
+    "name": "Unrecognized location",
+    "id": "335af048-f3a3-41b1-9336-a810f2345cc6"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "61889168-f759-42d8-8c5b-113b3f88866e"
+  },
+  {
+    "latitude": "17.4337454",
+    "longitude": "78.5015742",
+    "dateField": "03-02-2020",
+    "addressName": "Secunderabad Railway Station Rd\nRailway Officer Colony, Botiguda, Bhoiguda\nSecunderabad, Telangana 500025\nIndia",
+    "name": "Secunderabad Junction",
+    "id": "0f902526-70a6-4ab7-8cd6-8f2e56bb65aa"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "fe91f0fa-fa5e-4810-bcfe-cd5ff20fc4b3"
+  },
+  {
+    "latitude": "17.3920827",
+    "longitude": "78.5122788",
+    "dateField": "03-02-2020",
+    "addressName": "Unrecognized location",
+    "name": "Unrecognized location",
+    "id": "e6df7a71-e0fa-42f6-aebe-4bacf2b9d7f3"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "ef9c43a9-1786-4af9-af2e-21546fb61258"
+  },
+  {
+    "latitude": "17.4185997",
+    "longitude": "78.3472372",
+    "dateField": "04-02-2020",
+    "addressName": "Survey No\n115, Rd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "WaveRock SEZ",
+    "id": "93a0d0e9-b90f-4e21-aca8-c9c38854a0a1"
+  },
+  {
+    "latitude": "17.4187033",
+    "longitude": "78.3441771",
+    "dateField": "04-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "4ab8bed4-4aad-42c8-aa7a-a0900da95556"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "4ea65747-6d0e-4459-9231-57fcd4ad2347"
+  },
+  {
+    "latitude": "17.4187033",
+    "longitude": "78.3441771",
+    "dateField": "05-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "038ccdc2-85f7-4671-8105-8222e3514a05"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "3bfbed02-fd7f-4059-8e28-e767655f076a"
+  },
+  {
+    "latitude": "17.3920827",
+    "longitude": "78.5122788",
+    "dateField": "06-02-2020",
+    "addressName": "Unrecognized location",
+    "name": "Unrecognized location",
+    "id": "5cd04666-a214-44ef-b5d9-fa9325d590cc"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "d4c0068d-af05-416d-b6dc-b028a42ef1b4"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "07-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "10fe03e2-2997-4e9e-b870-70c16f988e8d"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "f4da9a62-1904-4cd0-b75a-c779a87c2416"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "9f311949-ab17-455c-b753-71510ce999f5"
+  },
+  {
+    "latitude": "17.3920827",
+    "longitude": "78.5122788",
+    "dateField": "07-02-2020",
+    "addressName": "Unrecognized location",
+    "name": "Unrecognized location",
+    "id": "4b4f7e8e-dacc-4107-bcf2-52b1fabbbc4a"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "10-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "776eddb6-8432-48d5-93b2-b1cb27508194"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "a86bbc2c-6592-4b9a-b761-9fef93de6307"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "11-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "6f2b2932-ad0b-41ff-bb46-86fb1b6bd3fe"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "2520fb0b-8e8b-4067-9bb0-c002a85a87bd"
+  },
+  {
+    "latitude": "17.3457468",
+    "longitude": "78.5315639",
+    "dateField": "11-02-2020",
+    "addressName": "Thapovan Colony, Sai Nagar, Saroor Nagar East, Karmanghat\nHyderabad, Telangana 500035\nIndia",
+    "name": "Sri Lakshmi Theatre",
+    "id": "8edfb306-a779-4cda-afbf-4a8f1ca41ec6"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "d20b1932-d172-470d-a4f7-f0727af4af46"
+  },
+  {
+    "latitude": "17.3684190",
+    "longitude": "78.5227413",
+    "dateField": "11-02-2020",
+    "addressName": "Madhura Puri Colony, Dilsukhnagar\nHyderabad, Telangana 500060\nIndia",
+    "name": "Dilsukhnagar",
+    "id": "a3b5fca4-e06f-40ff-b510-9cce8d424d76"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "695db2b4-4664-4aa0-94f5-bb0e6df091bd"
+  },
+  {
+    "latitude": "17.3942710",
+    "longitude": "78.5057180",
+    "dateField": "11-02-2020",
+    "addressName": "1167/1, Telangana 500044 2-2\n1167\n3/1, Tilak Nagar Rd\nBlock 3, Tilak Nagar, Kachiguda\nHyderabad, Telangana 500027\nIndia",
+    "name": "Mahesh Pan Shop",
+    "id": "442e5185-f14b-42dd-894b-60560f64d532"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "9ee83228-02bc-49cf-8b0b-a7ab800af4ba"
+  },
+  {
+    "latitude": "17.4456204",
+    "longitude": "78.3777672",
+    "dateField": "12-02-2020",
+    "addressName": "Plot No 18\nSector-2, Hitech City Main Rd\nHUDA Techno Enclave, Madhapur\nHyderabad, Telangana 500081\nIndia",
+    "name": "Hardhik Crown",
+    "id": "b2165683-140f-4dec-b535-540fa26c6738"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "6dd39699-da30-489f-a537-67b8832a338f"
+  },
+  {
+    "latitude": "17.4312330",
+    "longitude": "78.3429951",
+    "dateField": "12-02-2020",
+    "addressName": "ISB Rd\nGachibowli\nHyderabad, Telangana 500032\nIndia",
+    "name": "Microsoft India",
+    "id": "a6003249-09c6-465f-9652-b6ef970ea908"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "12-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "8ff050b0-2452-4d03-8707-4da6bcf81657"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "5fea79ed-e3bb-48a6-aa7c-f0eb131364f1"
+  },
+  {
+    "latitude": "17.3920827",
+    "longitude": "78.5122788",
+    "dateField": "13-02-2020",
+    "addressName": "Unrecognized location",
+    "name": "Unrecognized location",
+    "id": "fc425320-0123-43c0-b6f0-e438ddaeb6d8"
+  },
+  {
+    "latitude": "17.4205591",
+    "longitude": "78.4560943",
+    "dateField": "13-02-2020",
+    "addressName": "6-3-655, Punjagutta Rd\nSangeet Nagar, Somajiguda\nHyderabad, Telangana 500082\nIndia",
+    "name": "Irrum Manzil Metro station",
+    "id": "1443de4d-c951-497a-952b-996c7615435f"
+  },
+  {
+    "latitude": "17.4228560",
+    "longitude": "78.4544700",
+    "dateField": "13-02-2020",
+    "addressName": "Punjagutta Rd\nPunjagutta Market, Punjagutta\nHyderabad, Telangana 500082\nIndia",
+    "name": "NIMS Hospital",
+    "id": "8aae6c1f-99a5-4a92-83f6-7b58c9f187e9"
+  },
+  {
+    "latitude": "17.4851155",
+    "longitude": "78.4115577",
+    "dateField": "13-02-2020",
+    "addressName": "HIG-H/359\nAPHB Colony, Kukatpally\nHyderabad, Telangana 500072\nIndia",
+    "name": "Kukatpally",
+    "id": "9b2cc5a2-f847-415c-bffc-ceaeabc1196a"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "4ea4a826-e7ec-4531-abdb-1719d22664f5"
+  },
+  {
+    "latitude": "17.4947577",
+    "longitude": "78.3171461",
+    "dateField": "13-02-2020",
+    "addressName": "NH65\nGangaram, Chanda Nagar\nHyderabad, Telangana 500050\nIndia",
+    "name": "Lingampally Bus Stand",
+    "id": "fc882150-85a7-4697-9791-0dfec4ac782b"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "54263f7c-6012-4606-9412-fa26924c43ba"
+  },
+  {
+    "latitude": "17.5068313",
+    "longitude": "78.3123874",
+    "dateField": "13-02-2020",
+    "addressName": "1-39/1/5\nNew Shankar Nagar, Chanda Nagar\nRamachandrapuram (BHEL Township), Telangana 500050\nIndia",
+    "name": "1-39/1/5",
+    "id": "f637e634-4919-46ed-bebe-d35ddb325a1e"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "af484a81-bbbf-43c5-ad88-0ca3e3f24fab"
+  },
+  {
+    "latitude": "17.4963307",
+    "longitude": "78.3969019",
+    "dateField": "13-02-2020",
+    "addressName": "KPHB Main Rd\nbeside Vishwanath theater\nJal Vayu Vihar, Kukatpally\nHyderabad, Telangana 500072\nIndia",
+    "name": "Chutneys",
+    "id": "ec05ee1b-822e-4fcf-9533-50906c1d6432"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "fac098a4-84d9-4d2b-a06d-f3c398f87364"
+  },
+  {
+    "latitude": "17.4853116",
+    "longitude": "78.4110120",
+    "dateField": "13-02-2020",
+    "addressName": "Mumbai Hwy\nopp. BIG BAZAR\nBalaji Nagar, Kukatpally\nHyderabad, Telangana 500072\nIndia",
+    "name": "OMNI Hospitals",
+    "id": "918fbd5e-e9a4-4828-a3a5-4ccf0728b698"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "3f409428-8f1b-470d-8e14-4a3ad4ac2913"
+  },
+  {
+    "latitude": "17.4124512",
+    "longitude": "78.4688386",
+    "dateField": "13-02-2020",
+    "addressName": "NTR Marg\nCentral Secretariat, Khairtabad\nHyderabad, Telangana 500004\nIndia",
+    "name": "NTR Gardens",
+    "id": "1bc0eab9-7a60-40fb-804d-a246fac12869"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "d7beadee-4357-4292-b06b-0cf2d32a2a62"
+  },
+  {
+    "latitude": "17.3920827",
+    "longitude": "78.5122788",
+    "dateField": "13-02-2020",
+    "addressName": "Unrecognized location",
+    "name": "Unrecognized location",
+    "id": "407607d5-c7e4-448c-86ba-395fa2ac4acb"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "1a3f4bbf-a729-4401-8b74-ad6ad39be0a6"
+  },
+  {
+    "latitude": "17.4039540",
+    "longitude": "78.4650040",
+    "dateField": "14-02-2020",
+    "addressName": "Ambedkar Colony, Khairtabad\nHyderabad, Telangana 500004\nIndia",
+    "name": "Lakdi-Ka-Pul",
+    "id": "3e7d6ba8-684c-41ae-a5fa-2529a590ec3d"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "37ba67f2-989e-4e1e-952b-bbc104758a32"
+  },
+  {
+    "latitude": "17.4853116",
+    "longitude": "78.4110120",
+    "dateField": "14-02-2020",
+    "addressName": "Mumbai Hwy\nopp. BIG BAZAR\nBalaji Nagar, Kukatpally\nHyderabad, Telangana 500072\nIndia",
+    "name": "OMNI Hospitals",
+    "id": "ee3e39ed-7731-4b0f-b4a8-0b66a9ad72e1"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "fa086711-0d77-4116-9284-39f6559b4227"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "14-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "72b6c411-84c6-4eb0-940f-568ae69a68d5"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "6bd65317-9c18-4b2b-a830-c162cd8e6ed4"
+  },
+  {
+    "latitude": "17.4851155",
+    "longitude": "78.4115577",
+    "dateField": "14-02-2020",
+    "addressName": "HIG-H/359\nAPHB Colony, Kukatpally\nHyderabad, Telangana 500072\nIndia",
+    "name": "Kukatpally",
+    "id": "7b472e6d-ba04-48d4-933f-8b0f2edb22cf"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "1b6af378-d687-416f-a08d-35e9bc01860d"
+  },
+  {
+    "latitude": "17.3920827",
+    "longitude": "78.5122788",
+    "dateField": "14-02-2020",
+    "addressName": "Unrecognized location",
+    "name": "Unrecognized location",
+    "id": "111742b7-e7bf-43e7-916f-2af916ca5fa7"
+  },
+  {
+    "latitude": "17.3920827",
+    "longitude": "78.5122788",
+    "dateField": "16-02-2020",
+    "addressName": "Unrecognized location",
+    "name": "Unrecognized location",
+    "id": "ac446a3d-1cbf-4712-8713-06ee55b8c2d6"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "17-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "c6f20494-0446-4474-8c08-d46bc7c2ccb4"
+  },
+  {
+    "latitude": "17.3921523",
+    "longitude": "78.5122800",
+    "dateField": "19-02-2020",
+    "addressName": "2-2-1074/12\nBagh Amberpet, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "Sai Mitra Residency",
+    "id": "da06ae0a-4ebd-4049-84eb-4d4f20fad825"
+  },
+  {
+    "latitude": "17.3920827",
+    "longitude": "78.5122788",
+    "dateField": "19-02-2020",
+    "addressName": "Unrecognized location",
+    "name": "Unrecognized location",
+    "id": "30e64550-3831-4f33-9e23-28f87162500a"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "d9f0dd59-6ab7-4ab8-90c2-c459399f8d95"
+  },
+  {
+    "latitude": "17.4048712",
+    "longitude": "78.5104419",
+    "dateField": "19-02-2020",
+    "addressName": "Maurya Towers\n1-9-684\nVidya Nagar, Adikmet\nHyderabad, Telangana 500044\nIndia",
+    "name": "Spencers Super Market",
+    "id": "177af488-53c3-4f1d-8313-3cd928df1dee"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "fa8c4f5a-f632-4230-afca-47e47e8f49c0"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "20-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "fdae12b9-ba2e-4f09-bb6a-71d776982452"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "5213b8c2-2da8-40c6-87c8-4a198302e0ba"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "20-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "ed7f2cec-8ddc-406c-819f-79d59f5d8857"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "21-02-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "abe02f62-4528-4e8d-a76b-5335e2142e54"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "70c265fa-6788-44ab-8a17-5986b456ecdf"
+  },
+  {
+    "latitude": "17.3997808",
+    "longitude": "78.5552037",
+    "dateField": "22-02-2020",
+    "addressName": "Near Rajiv Gandhi International Cricket Stadium\nSurvey Colony, Industrial Development Area, Uppal\nHyderabad, Telangana 500039\nIndia",
+    "name": "DSL VIRTUE MALL",
+    "id": "a4b236b1-f228-4d8d-8d50-049f40ff0e90"
+  },
+  {
+    "latitude": "17.3905070",
+    "longitude": "78.4884692",
+    "dateField": "23-02-2020",
+    "addressName": "Veer Savarkar Marg\nBadichowdi, Rajamohallah, King Koti, Hyderguda\nHyderabad, Telangana 500095\nIndia",
+    "name": "Inox Maheshwari Parmeshwari",
+    "id": "73b58776-aaf6-4b62-bb61-643404e2ff58"
+  },
+  {
+    "latitude": "17.3905130",
+    "longitude": "78.4884825",
+    "dateField": "23-02-2020",
+    "addressName": "Maheshwari Parameshwari Towers\n4-2-27, Kachiguda X Rd\nBadichowdi, Rajamohallah, King Koti, Hyderguda\nHyderabad, Telangana 500027\nIndia",
+    "name": "BB - FC-HYDERABAD-KACHIGUDA X ROAD-PARAMESHWARI TOWERS",
+    "id": "9e8c0cba-914c-4274-b085-896429e42e10"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "b6a94c65-8a4a-416c-8d94-61869f5971ec"
+  },
+  {
+    "latitude": "17.3902289",
+    "longitude": "78.4936693",
+    "dateField": "23-02-2020",
+    "addressName": "3-4-34, Kachiguda Station Rd\nnear SVS Institute of Neuro Science\nBarkatpura, Kachiguda\nHyderabad, Telangana 500027\nIndia",
+    "name": "Udupi Aahar",
+    "id": "50751953-695f-43eb-a900-6f3c9e83c493"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "c1ceb22e-4aff-443a-930c-7c01c12a7572"
+  },
+  {
+    "latitude": "17.4001766",
+    "longitude": "78.4874040",
+    "dateField": "23-02-2020",
+    "addressName": "Unrecognized location",
+    "name": "The Bhimavaram Boys",
+    "id": "d0edd0ab-143e-46b8-831a-55d44a6e0cc8"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "edfb13b0-2d29-41fd-9864-d03cee3ad54b"
+  },
+  {
+    "latitude": "17.4005649",
+    "longitude": "78.4889583",
+    "dateField": "23-02-2020",
+    "addressName": "Near King & Cardinal Bakery\nOpposite Shanti TV shows Showroom\nHimayathnagar\nVenkata swamy Nagar, Narayanguda\nHyderabad, Telangana 500029\nIndia",
+    "name": "Balloons Unlimited Himayathnagar",
+    "id": "cbe4c8e8-761d-4bbc-a882-c74afc78a0fd"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "4fe175a5-ab93-4075-ad69-7f770c818853"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "24-02-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "02488804-0def-4df0-bb24-933b13f650a7"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "224b3abb-478a-4c0a-9ef8-5f96f50094e4"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "24-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "10921c97-92ef-4f58-8fbb-7cccfae1741b"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "e456ffee-481a-40bc-bd2c-51852a0a7afa"
+  },
+  {
+    "latitude": "17.3916760",
+    "longitude": "78.5107910",
+    "dateField": "25-02-2020",
+    "addressName": "Shivam Rd\nShri Mitra Enclave, Tilak Nagar, Amberpet\nHyderabad, Telangana 500013\nIndia",
+    "name": "6 Number",
+    "id": "41453c6a-fed5-46b6-b450-c02704b6207f"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "dc454c9d-1bdc-4bd3-8ab7-02d34c24bf24"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "25-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "15240ebe-301b-499f-afbf-c987b79aec46"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "7168da37-b1a1-4484-84e9-123035eedd29"
+  },
+  {
+    "latitude": "17.4851155",
+    "longitude": "78.4115577",
+    "dateField": "25-02-2020",
+    "addressName": "HIG-H/359\nAPHB Colony, Kukatpally\nHyderabad, Telangana 500072\nIndia",
+    "name": "Kukatpally",
+    "id": "081d8389-61e1-4aea-9a8f-0ec807d0f6d8"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "8f0a526d-420a-42b5-82a3-95c5fee5c283"
+  },
+  {
+    "latitude": "17.4187400",
+    "longitude": "78.3441414",
+    "dateField": "26-02-2020",
+    "addressName": "Survey No. 115, Plot No. 11, 12/P, 15 & 16P\nRd Number 2\nFinancial District, Nanakramguda\nHyderabad, Telangana 500032\nIndia",
+    "name": "Honeywell",
+    "id": "9262dd48-2748-4433-bf47-26183be3424b"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "6ba75562-a426-4b94-ba32-7bf61554e950"
+  },
+  {
+    "latitude": "17.4290270",
+    "longitude": "78.4036130",
+    "dateField": "27-02-2020",
+    "addressName": "1029, Rd Number 45\nMasthan Nagar, Nandagiri Hills, Jubilee Hills\nHyderabad, Telangana 500033\nIndia",
+    "name": "Home Affairs",
+    "id": "aa5595d2-f251-433a-bf68-4daaef95894a"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "29458f58-692b-46bd-bfbd-5da9ab1e0804"
+  },
+  {
+    "latitude": "17.4266733",
+    "longitude": "78.4065489",
+    "dateField": "27-02-2020",
+    "addressName": "Plot No\n1057, Rd Number 45\nMasthan Nagar, Nandagiri Hills, Jubilee Hills\nHyderabad, Telangana 500033\nIndia",
+    "name": "Tollgate Eating House",
+    "id": "78f9025e-7c61-44f3-a69f-71e7f20d4567"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "09080b14-f837-4a6b-b140-70b09487220d"
+  },
+  {
+    "latitude": "17.4282288",
+    "longitude": "78.4137204",
+    "dateField": "27-02-2020",
+    "addressName": "Rd Number 36\nJawahar Colony, Jubilee Hills\nHyderabad, Telangana 500033\nIndia",
+    "name": "Jubilee Hills Check Post",
+    "id": "9ff255fc-719a-4431-909b-792ffdca48ba"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "75365760-07ca-4d27-a15b-46ae64fbaba4"
+  },
+  {
+    "latitude": "17.4266733",
+    "longitude": "78.4065489",
+    "dateField": "27-02-2020",
+    "addressName": "Plot No\n1057, Rd Number 45\nMasthan Nagar, Nandagiri Hills, Jubilee Hills\nHyderabad, Telangana 500033\nIndia",
+    "name": "Tollgate Eating House",
+    "id": "f677413b-c780-47bb-afa7-f4cf9b06dcab"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "6da8b687-d076-4fac-b704-d2b64df7da21"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "b1e23b04-bbd4-420b-bf78-59c9a5792bfb"
+  },
+  {
+    "latitude": "17.4357879",
+    "longitude": "78.5054284",
+    "dateField": "27-02-2020",
+    "addressName": "Opposite Uppal Bus Stop, St Johns Road\nRailway Station\nRoad\nRegimental Bazaar, Chilakalguda\nSecunderabad, Telangana 500003\nIndia",
+    "name": "Secunderabad East",
+    "id": "e2ede1bb-7c7f-4ace-85d4-addc16bb8c13"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "0288fd3c-58ea-4b77-b242-54d6d27332f6"
+  },
+  {
+    "latitude": "17.3920827",
+    "longitude": "78.5122788",
+    "dateField": "28-02-2020",
+    "addressName": "Unrecognized location",
+    "name": "Unrecognized location",
+    "id": "7259e843-186f-4dbe-a911-cceaef813fc0"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "fc7eda3e-62d6-48a6-a16f-fc3499da2276"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "fa251c6c-ee91-4c04-98f1-ad6917c797a0"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "bc2947a3-b038-4c47-b952-a078869a5d55"
+  },
+  {
+    "latitude": "17.4066743",
+    "longitude": "78.4710462",
+    "dateField": "29-02-2020",
+    "addressName": "349,5-9-22/19\nAmbedkar Colony, Adarsh Nagar\nHyderabad, Telangana 500063\nIndia",
+    "name": "LIC Zonal Office",
+    "id": "0cb683ad-3ef5-4868-8846-18d66c4fa306"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "487b1be8-a777-4318-bc5c-a0b524badbcc"
+  },
+  {
+    "latitude": "17.4413120",
+    "longitude": "78.3592630",
+    "dateField": "29-02-2020",
+    "addressName": "135, Mumbai Hwy\nVinayak Nagar, Indira Nagar, Gachibowli\nHyderabad, Telangana 500032\nIndia",
+    "name": "Renuka Xerox",
+    "id": "7bc788e1-49a8-4986-835c-359a79276c24"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "97004fd4-8939-47dd-9e62-f9af3d8700cd"
+  },
+  {
+    "latitude": "17.4578635",
+    "longitude": "78.3725702",
+    "dateField": "29-02-2020",
+    "addressName": "Survey No. 13\nHitech City Rd\nKondapur\nHyderabad, Telangana 500084\nIndia",
+    "name": "Divyasree OMEGA",
+    "id": "7436f20a-7fcb-499c-b789-5abec44769d1"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "dd1aa43d-0f9c-4efc-b018-9d86ff20710d"
+  },
+  {
+    "latitude": "17.4516498",
+    "longitude": "78.3936461",
+    "dateField": "29-02-2020",
+    "addressName": "3-821, 100 Feet Rd\nAyyappa Society, Mega Hills, Madhapur\nHyderabad, Telangana 500033\nIndia",
+    "name": "Karalu Miriyal - Best South Indian Restaurant, Hyderabad",
+    "id": "848436c1-4170-499d-9f82-516f926fc500"
+  },
+  {
+    "latitude": null,
+    "longitude": null,
+    "dateField": null,
+    "addressName": null,
+    "name": null,
+    "id": "d0ff0578-ed01-4e30-9997-61d4f412a2e5"
   }
 ]
