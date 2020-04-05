@@ -126,7 +126,7 @@ function MapView() {
     let apiresource = 'infected-areas.json';
     if (filter.user) {
       apiresource =
-        Number(filter.user) % 2 == 1
+        Number(filter.user) % 2 === 1
           ? 'user-infected.json'
           : 'user-not-infected.json';
     }

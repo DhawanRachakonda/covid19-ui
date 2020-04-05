@@ -9,5 +9,5 @@ export default {
     link: '/',
     path: '/',
     exact: true
-  },
+  }
 };
