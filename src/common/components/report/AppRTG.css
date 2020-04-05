@@ -12,3 +12,7 @@
 .rtg-modal .form-group {
     margin-bottom: 0.4rem;
 }
+
+.rtg-alert-modal .alert {
+    margin-bottom: 0rem;
+}

@@ -14,3 +14,7 @@
 .rtg-button {
     margin-left: 12rem;
 }
+
+.react-datepicker-wrapper {
+    display: block;
+}
