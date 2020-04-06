@@ -4,6 +4,7 @@ import { lazy } from 'react';
 const AdminPage = lazy(() => import('../common/components/admin'));
 const PageNotFound = lazy(() => import('../common/components/page_not_found'));
 const Home = lazy(() => import('../common/components/home'));
+const AddAdminPage  = lazy(() => import('../common/components/admin/AddAdmin'));
 
 export default [
   // {
@@ -28,6 +29,10 @@ export default [
   {
     path: paths.admin.path,
     Component: AdminPage
+  },
+  {
+    path: paths.addAdmin.path,
+    Component: AddAdminPage
   },
   {
     path: '*',

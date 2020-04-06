@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Button, CardColumns, Card, Tabs, Tab } from 'react-bootstrap';
+import { MdFileUpload } from 'react-icons/md';
 import DatePicker from 'react-datepicker';
 import PlacesAutocomplete, {
   geocodeByAddress,
@@ -101,7 +102,21 @@ function InfectedPlaceForm() {
 function UploadFromGoogle() {
   return (
     <div style={{ marginTop: '2.5rem' }}>
-      <a href="https://takeout.google.com/">Upload Google Data</a>
+      <p className="how-takout--works">
+        <a
+          target="_blank"
+          className="color-black"
+          href="https://takeout.google.com/"
+        >
+          <MdFileUpload style={{ fontSize: 60 }} />
+        </a>
+        <a
+          target="_blank"
+          href={`${process.env.PUBLIC_URL}/IncubationTrackerCovid19.html`}
+        >
+          How Takeout works?
+        </a>
+      </p>
     </div>
   );
 }

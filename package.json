@@ -23,6 +23,7 @@
     "@types/redux-thunk": "^2.1.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
+    "broadcast-channel": "^3.1.0",
     "leaflet": "^1.6.0",
     "react": "^16.13.0",
     "react-app-polyfill": "^1.0.6",

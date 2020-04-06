@@ -11,6 +11,8 @@ import {
 import { Card } from 'react-bootstrap';
 import { DivIcon } from 'leaflet';
 
+import './Map.css';
+
 import MapControl from './MapControl';
 
 const RedIcon = new DivIcon({

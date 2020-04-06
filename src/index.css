@@ -35,6 +35,70 @@ code {
 }
 
 .full-screen--exit:hover,
-.full-screen:hover {
+.full-screen:hover,
+.upload-file--previous-data:hover {
   cursor: pointer;
+}
+
+.display-block {
+  display: block;
+}
+
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(3px, 3px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-3px, -4px) rotate(-3deg);
+  }
+  20% {
+    transform: translate(-5px, 0px) rotate(3deg);
+  }
+  30% {
+    transform: translate(5px, 3px) rotate(0deg);
+  }
+  40% {
+    transform: translate(3px, -3px) rotate(3deg);
+  }
+  50% {
+    transform: translate(-3px, 3px) rotate(-3deg);
+  }
+  60% {
+    transform: translate(-4px, 2px) rotate(0deg);
+  }
+  70% {
+    transform: translate(5px, 3px) rotate(-3deg);
+  }
+  80% {
+    transform: translate(-2px, -2px) rotate(3deg);
+  }
+  90% {
+    transform: translate(4px, 4px) rotate(0deg);
+  }
+  100% {
+    transform: translate(2px, -1px) rotate(-3deg);
+  }
+}
+
+.navbar-nav .nav-item .padding-top-bottom--045 {
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+
+.line-height--none {
+  line-height: 0;
+}
+
+.color-black {
+  color: black;
+}
+
+.how-takout--works {
+  margin: 0 auto;
+  width: 20%;
 }

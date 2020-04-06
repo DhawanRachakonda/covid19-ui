@@ -1,0 +1,8 @@
+.leaflet-control .custom.custom-file {
+  width: 0;
+  top: -15.5px;
+}
+
+.leaflet-control .custom.custom-file .custom-file-input {
+  height: 0;
+}

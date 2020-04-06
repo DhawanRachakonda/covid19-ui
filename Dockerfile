@@ -1,7 +1,9 @@
 FROM node:latest AS build
 
 ENV REACT_APP_GET_INFECTED_LIST=http://localhost:3003/api/v1/ic-tracker/infected-areas
-REACT_APP_POST_SUSPECTION_DETAILS=https://incubationtracker.herokuapp.com/api/v1/ic-tracker/suspection-details
+ENV REACT_APP_POST_SUSPECTION_DETAILS=https://incubationtracker.herokuapp.com/api/v1/ic-tracker/suspection-details
+ENV REACT_APP_POST_AUTHENTICATE=http://localhost:3003/authenticate
+ENV REACT_APP_POST_REGISTER=http://localhost:3003/register
 
 WORKDIR /app
 COPY . .

@@ -12,13 +12,21 @@ function SuccessToaster({ message }: ISuccessToaster) {
       style={{
         position: 'absolute',
         top: 0,
-        right: 0
+        right: 0,
+        backgroundColor: '#d4edda',
+        color: '#155724'
       }}
       animation={true}
       delay={3000}
+      className="success-toast"
     >
+      <Toast.Header>
+        <strong className="mr-auto">Success Message</strong>
+      </Toast.Header>
       <Toast.Body>
-        <FormattedMessage id={message} />
+        <strong>
+          <FormattedMessage id={message} />
+        </strong>
       </Toast.Body>
     </Toast>
   );
@@ -34,13 +42,18 @@ export function FailureToaster({ message }: IFailureToaster) {
       style={{
         position: 'absolute',
         top: 0,
-        right: 0
+        right: 0,
+        backgroundColor: '#f8d7da',
+        color: '#721c24'
       }}
       animation={true}
       delay={3000}
     >
+      <Toast.Header>
+        <strong className="mr-auto">Failure Message</strong>
+      </Toast.Header>
       <Toast.Body>
-        <span>{message}</span>
+        <strong>{message}</strong>
       </Toast.Body>
     </Toast>
   );
