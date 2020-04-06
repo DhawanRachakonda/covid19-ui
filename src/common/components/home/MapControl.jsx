@@ -50,6 +50,22 @@ function applyFiltersOnMap({ ...rest }) {
   );
 }
 
+function enableFullScreen({ ...rest }) {
+  return (
+    <Tooltip {...rest}>
+      <FormattedMessage id="app.filters.enableFullScreen" />
+    </Tooltip>
+  );
+}
+
+function disableFullScreen({ ...rest }) {
+  return (
+    <Tooltip {...rest}>
+      <FormattedMessage id="app.filters.disableFullScreen" />
+    </Tooltip>
+  );
+}
+
 function UploadFileIcon() {
   const dispatch = useAppDispatch();
 
@@ -306,30 +322,44 @@ export default function MapControls() {
   return (
     <Control position="topright">
       {!isFullScreenEnabled && (
-        <MdFullscreen
-          className="full-screen display-block"
-          style={{ fontSize: 30 }}
-          onClick={() => {
-            document.querySelector('.infected-list--map').requestFullscreen();
-            setIsFullScreenEnabled(!isFullScreenEnabled);
-          }}
-        />
+        <OverlayTrigger
+          placement="right"
+          delay={{ show: 250, hide: 400 }}
+          overlay={enableFullScreen}
+        >
+          <MdFullscreen
+            className="full-screen display-block"
+            style={{ fontSize: 30 }}
+            onClick={() => {
+              document.querySelector('.infected-list--map').requestFullscreen();
+              setIsFullScreenEnabled(!isFullScreenEnabled);
+            }}
+          />
+        </OverlayTrigger>
       )}
       {isFullScreenEnabled && (
-        <MdFullscreenExit
-          className="full-screen--exit display-block"
-          style={{ fontSize: 30 }}
-          onClick={() => {
-            document.exitFullscreen();
-            setIsFullScreenEnabled(!isFullScreenEnabled);
-          }}
-        />
+        <OverlayTrigger
+          placement="right"
+          delay={{ show: 250, hide: 400 }}
+          overlay={disableFullScreen}
+        >
+          <MdFullscreenExit
+            className="full-screen--exit display-block"
+            style={{ fontSize: 30 }}
+            onClick={() => {
+              document.exitFullscreen();
+              setIsFullScreenEnabled(!isFullScreenEnabled);
+            }}
+          />
+        </OverlayTrigger>
       )}
 
-      <UploadFileIcon />
-
-      <FilterList />
-      <ReportProblem />
+      {!isFullScreenEnabled && (
+        <React.Fragment>
+          {' '}
+          <UploadFileIcon /> <FilterList /> <ReportProblem />
+        </React.Fragment>
+      )}
     </Control>
   );
 }
