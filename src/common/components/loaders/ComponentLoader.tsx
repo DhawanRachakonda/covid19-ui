@@ -3,15 +3,11 @@ import { Spinner } from 'react-bootstrap';
 
 import './component-loader.css';
 
-import AppTemplate from '../AppTemplate';
-
 export function ComponentLoader() {
   return (
-    <AppTemplate>
-      <div className="component-spinner">
-        <Loader />
-      </div>
-    </AppTemplate>
+    <div className="component-spinner">
+      <Loader />
+    </div>
   );
 }
 

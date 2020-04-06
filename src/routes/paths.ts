@@ -1,18 +1,18 @@
 export default {
   admin: {
-    routeLink: '/admin',
+    routeLink: '/#admin',
     link: '/admin',
-    path: '/admin'
+    path: '/#admin'
   },
   addAdmin: {
-    routeLink: '/add-admin',
+    routeLink: '/#add-admin',
     link: '/add-admin',
-    path: '/add-admin'
+    path: '/#add-admin'
   },
   home: {
     routeLink: '',
     link: '/',
-    path: '/',
+    path: '/#',
     exact: true
   }
 };
