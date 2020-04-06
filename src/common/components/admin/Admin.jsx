@@ -154,7 +154,7 @@ export default function AdminHomePage() {
       id="uncontrolled-tab-example"
       style={{ marginTop: '2.5rem' }}
     >
-      <Tab eventKey="home" title="Add Infect Pace">
+      <Tab eventKey="home" title="Add Infect Place">
         <InfectedPlaceForm />
       </Tab>
       <Tab eventKey="profile" title="Upload From Google">

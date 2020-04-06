@@ -14,6 +14,7 @@ import { FormattedMessage } from 'react-intl';
 import UserService from '../../services/user-services';
 import { FailureToaster } from './toaster/SuccessToaster';
 import paths from '../../routes/paths';
+import Loader from './loaders';
 
 interface IAdminTemplateProps {
   children: React.ReactNode;
@@ -107,6 +108,7 @@ interface ILoginPopupProps {
 function LoginPopup({ onSuccess, ...rest }: ILoginPopupProps) {
   const [isError, setIsError] = React.useState(false);
   const [isFormInvalid, setIsFormInvalid] = React.useState(false);
+  const [isAuthenticating, setIsAuthenticating] = React.useState(false);
 
   const handleOnSubmit = async (e: any) => {
     e.preventDefault();
@@ -115,17 +117,22 @@ function LoginPopup({ onSuccess, ...rest }: ILoginPopupProps) {
       e.target.form.elements.username.value &&
       e.target.form.elements.password.value
     ) {
-      setIsError(false);
-      const response = await UserService.login(
-        e.target.form.elements.username.value,
-        e.target.form.elements.password.value
-      );
-      if (response.username) {
-        UserService.saveUserToken(response);
-        onSuccess();
-      } else {
-        setIsError(true);
-        setTimeout(() => setIsError(false), 3000);
+      try {
+        setIsError(false);
+        setIsAuthenticating(true);
+        const response = await UserService.login(
+          e.target.form.elements.username.value,
+          e.target.form.elements.password.value
+        );
+        if (response.username) {
+          UserService.saveUserToken(response);
+          onSuccess();
+        } else {
+          setIsError(true);
+          setTimeout(() => setIsError(false), 3000);
+        }
+      } finally {
+        setIsAuthenticating(false);
       }
     } else {
       setIsFormInvalid(true);
@@ -173,9 +180,16 @@ function LoginPopup({ onSuccess, ...rest }: ILoginPopupProps) {
                 required
               />
             </Form.Group>
-            <Button variant="primary" type="submit" onClick={handleOnSubmit}>
-              Submit
-            </Button>
+            {isAuthenticating && (
+              <p className="margin-left--7">
+                <Loader />
+              </p>
+            )}
+            {!isAuthenticating && (
+              <Button variant="primary" type="submit" onClick={handleOnSubmit}>
+                Submit
+              </Button>
+            )}
           </Form>
         </Modal.Body>
       </Modal>
