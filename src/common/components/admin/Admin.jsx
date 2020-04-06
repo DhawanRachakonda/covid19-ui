@@ -1,5 +1,14 @@
 import React from 'react';
-import { Form, Button, CardColumns, Card, Tabs, Tab } from 'react-bootstrap';
+import {
+  Form,
+  Button,
+  CardColumns,
+  Card,
+  Tabs,
+  Tab,
+  Tooltip,
+  OverlayTrigger
+} from 'react-bootstrap';
 import { MdFileUpload } from 'react-icons/md';
 import DatePicker from 'react-datepicker';
 import UploadFiles from './UploadFiles';
@@ -7,6 +16,7 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng
 } from 'react-places-autocomplete';
+import { FormattedMessage } from 'react-intl';
 
 const renderFunc = ({ getInputProps, getSuggestionItemProps, suggestions }) => (
   <div className="autocomplete-root">
@@ -100,25 +110,36 @@ function InfectedPlaceForm() {
   );
 }
 
+function uploadFromGoogleTakeOutToolTip({ ...rest }) {
+  return (
+    <Tooltip id="upload-file--tooltip" {...rest}>
+      <FormattedMessage id="help.uploadFileFromGoogleTakeOut.toolTip" />
+    </Tooltip>
+  );
+}
+
 function UploadFromGoogle() {
   return (
     <div style={{ marginTop: '2.5rem' }}>
-
       <p className="how-takout--works">
-        
-        <a
-          target="_blank"
-          className="color-black"
-          href="https://takeout.google.com/"
-          
+        <OverlayTrigger
+          placement="right"
+          delay={{ show: 250, hide: 400 }}
+          overlay={uploadFromGoogleTakeOutToolTip}
         >
-          <MdFileUpload style={{ fontSize: 60 }}/>
-        </a>
+          <a
+            target="_blank"
+            className="color-black"
+            href="https://takeout.google.com/"
+          >
+            <MdFileUpload style={{ fontSize: 60 }} />
+          </a>
+        </OverlayTrigger>
         <a
           target="_blank"
           href={`${process.env.PUBLIC_URL}/IncubationTrackerCovid19.html`}
         >
-          How Takeout works?
+          <FormattedMessage id="help.googleTakeOut.instructions" />
         </a>
       </p>
       <UploadFiles></UploadFiles>

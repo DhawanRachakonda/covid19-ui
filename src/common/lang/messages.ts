@@ -21,7 +21,10 @@ export default {
       'Report Case to Authorities, if you feel like you are infected person',
     'app.filters.info': 'Apply Filters On Map',
     'app.filters.disableFullScreen': 'Disable Full Screen',
-    'app.filters.enableFullScreen': 'Enable Full Screen'
+    'app.filters.enableFullScreen': 'Enable Full Screen',
+    'help.uploadFileFromGoogleTakeOut.toolTip':
+      'Click here to navigate to Google Takeout',
+    'help.googleTakeOut.instructions': 'How Google Takeout works?'
   },
   hi: {}
 };
