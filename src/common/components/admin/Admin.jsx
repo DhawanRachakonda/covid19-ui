@@ -2,6 +2,7 @@ import React from 'react';
 import { Form, Button, CardColumns, Card, Tabs, Tab } from 'react-bootstrap';
 import { MdFileUpload } from 'react-icons/md';
 import DatePicker from 'react-datepicker';
+import UploadFiles from './UploadFiles';
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng
@@ -102,13 +103,16 @@ function InfectedPlaceForm() {
 function UploadFromGoogle() {
   return (
     <div style={{ marginTop: '2.5rem' }}>
+
       <p className="how-takout--works">
+        
         <a
           target="_blank"
           className="color-black"
           href="https://takeout.google.com/"
+          
         >
-          <MdFileUpload style={{ fontSize: 60 }} />
+          <MdFileUpload style={{ fontSize: 60 }}/>
         </a>
         <a
           target="_blank"
@@ -117,6 +121,7 @@ function UploadFromGoogle() {
           How Takeout works?
         </a>
       </p>
+      <UploadFiles></UploadFiles>
     </div>
   );
 }
