@@ -1,42 +1,14 @@
 import React from 'react';
-import { Navbar, Form, Button, Row, Col } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import DatePicker from 'react-datepicker';
-import AppRTG from '../report/AppRTG';
 
 import './AppFilter.css';
 
 import { useAppDispatch, useAppFormState } from './AppContext';
+import { FormattedMessage } from 'react-intl';
 
 function AppFilter({ id = 'search-bar' }) {
-  const [isFixed, setFixedTop] = React.useState(false);
-
-  React.useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '0px'
-    };
-    const observer = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((entry) =>
-          entry.isIntersecting ? setFixedTop(false) : setFixedTop(true)
-        ),
-      options
-    );
-    const target = document.querySelector('#app-header');
-    observer.observe(target);
-    return () => observer.disconnect();
-  }, []);
-
   const dispatch = useAppDispatch();
-
-  const setSelectedUser = (e) => {
-    dispatch({
-      type: 'SET_USER',
-      payload: {
-        value: e.currentTarget.value
-      }
-    });
-  };
 
   const setSelectedDate = (date) => {
     dispatch({
@@ -47,108 +19,21 @@ function AppFilter({ id = 'search-bar' }) {
     });
   };
 
-  const applyFilter = (e) => {
-    e.preventDefault();
-    dispatch({
-      type: 'APPLY_FILTER'
-    });
-  };
-
-  const reset = (e) => {
-    dispatch({
-      type: 'RESET'
-    });
-  };
-
-  const setOpacity = () => {
-    dispatch({
-      type: 'SET_OPACITY_FOR_MAP',
-      payload: {
-        value: 'opacity-05'
-      }
-    });
-  };
-
-  const unSetOpacity = () => {
-    dispatch({
-      type: 'UNSET_OPACITY_FOR_MAP'
-    });
-  };
-  const showRTGModal = (e) => {
-    dispatch({
-      type: 'SHOW_RTG',
-      payload: {
-        value: true
-      }
-    });
-  };
-
-  const { selectedUser, selectedDate } = useAppFormState();
+  const { selectedDate } = useAppFormState();
 
   return (
-    <Navbar
-      className={`bg-light justify-content-between search-bar ${
-        isFixed ? 'fixed-top' : ''
-      }`}
-      id={id}
-      bg="dark"
-      variant="dark"
-    >
-      <Form inline>
-        <Row>
-          <Form.Group controlId="exampleForm.SelectCustom">
-            <Col>
-              <Form.Label className="text-color--white">Select User</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control as="select" custom onChange={setSelectedUser}>
-                <option value="0" selected={selectedUser === '1'}>
-                  Select User
-                </option>
-                <option value="1" selected={selectedUser === '1'}>
-                  User 1
-                </option>
-                <option value="2" selected={selectedUser === '2'}>
-                  User 2
-                </option>
-                <option value="3" selected={selectedUser === '3'}>
-                  User 3
-                </option>
-              </Form.Control>
-            </Col>
-          </Form.Group>
-
-          <Form.Group>
-            <Col>
-              <Form.Label className="text-color--white">Date</Form.Label>
-            </Col>
-            <Col>
-              <DatePicker
-                className="form-control"
-                selected={selectedDate}
-                onChange={(date) => setSelectedDate(date)}
-                onCalendarOpen={setOpacity}
-                onCalendarClose={unSetOpacity}
-                maxDate={new Date()}
-              />
-            </Col>
-          </Form.Group>
-          <Form.Group>
-            <Button type="submit" onClick={applyFilter}>
-              Apply FIlter
-            </Button>
-            <Button type="reset" onClick={reset} className="margin-left--2">
-              Reset
-            </Button>
-            <Button type="button" onClick={showRTGModal} className="rtg-button">
-              Report To Govt.
-            </Button>
-
-            <AppRTG />
-          </Form.Group>
-        </Row>
-      </Form>
-    </Navbar>
+    <Form.Group controlId="formBasicPassword">
+      <Form.Label>Date</Form.Label>
+      <DatePicker
+        className="form-control"
+        selected={selectedDate}
+        onChange={(date) => setSelectedDate(date)}
+        maxDate={new Date()}
+      />
+      <Form.Text className="text-muted">
+        <FormattedMessage id="app.applyFiltersOnMap.date.info" />
+      </Form.Text>
+    </Form.Group>
   );
 }
 

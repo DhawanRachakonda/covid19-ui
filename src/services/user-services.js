@@ -52,7 +52,7 @@ export default class UserService {
     return Promise.resolve({});
   }
 
-  static async getAccessToken() {
+  static getAccessToken() {
     if (UserService.isUserLoggedIn()) {
       return JSON.parse(localStorage.useDetails).accessToken;
     }

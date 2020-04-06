@@ -16,16 +16,6 @@ code {
   float: right;
 }
 
-.leaflet-container {
-  width: 100%;
-  height: 60vh;
-}
-
-.leaflet-div-icon {
-  background: none !important;
-  border: none !important;
-}
-
 .text-color--white {
   color: white;
 }
@@ -36,7 +26,8 @@ code {
 
 .full-screen--exit:hover,
 .full-screen:hover,
-.upload-file--previous-data:hover {
+.upload-file--previous-data:hover,
+.filter-icon:hover {
   cursor: pointer;
 }
 
@@ -101,4 +92,12 @@ code {
 .how-takout--works {
   margin: 0 auto;
   width: 20%;
+}
+
+.margin-top--2_5 {
+  margin-top: 2.5rem;
+}
+
+.margin-top--0_5 {
+  margin-top: 0.5rem;
 }
