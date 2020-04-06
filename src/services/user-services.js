@@ -4,7 +4,7 @@ import FetchUtil from '../util/fetch';
 export default class UserService {
   static getUserDate() {
     const userDetails = JSON.parse(localStorage.useDetails);
-    return { userName: userDetails.name, isAdmin: userDetails.isAdmin };
+    return { userName: userDetails.userName, isAdmin: userDetails.isAdmin };
   }
 
   static isUserLoggedIn() {
@@ -69,7 +69,7 @@ export default class UserService {
       'useDetails',
       JSON.stringify({
         accessToken: response.token,
-        userName: response.name,
+        userName: response.username,
         isAdmin: true
       })
     );

@@ -15,29 +15,46 @@ import UserService from '../../services/user-services';
 import { FailureToaster } from './toaster/SuccessToaster';
 import paths from '../../routes/paths';
 import Loader from './loaders';
+import { UserProvider, useUserState } from './providers/UserProvider';
 
 interface IAdminTemplateProps {
   children: React.ReactNode;
   onLoginRequired: () => void;
+  onLogout: () => void;
 }
 
-function AdminOptions() {
+interface IAdminOptionsProps {
+  onLogout: () => void;
+}
+
+function AdminOptions({ onLogout }: IAdminOptionsProps) {
+  const { userName } = useUserState();
   return (
-    <Nav className="mr-auto">
-      <NavDropdown title="Services" id="basic-nav-dropdown">
-        <NavDropdown.Item href={paths.addAdmin.routeLink}>
-          <FormattedMessage id="app.registerUserText" />
-        </NavDropdown.Item>
-        <NavDropdown.Item href={paths.admin.routeLink}>
-          <FormattedMessage id="app.uploadInfectedPlaces" />
-        </NavDropdown.Item>
-      </NavDropdown>
-    </Nav>
+    <React.Fragment>
+      <Nav className="mr-auto">
+        <NavDropdown title="Services" id="basic-nav-dropdown">
+          <NavDropdown.Item href={paths.addAdmin.routeLink}>
+            <FormattedMessage id="app.registerUserText" />
+          </NavDropdown.Item>
+          <NavDropdown.Item href={paths.admin.routeLink}>
+            <FormattedMessage id="app.uploadInfectedPlaces" />
+          </NavDropdown.Item>
+        </NavDropdown>
+      </Nav>
+      <Navbar.Collapse className="justify-content-end">
+        <Navbar.Text>Signed in as: {userName}</Navbar.Text>
+        <Nav.Link onClick={onLogout}>Logout</Nav.Link>
+      </Navbar.Collapse>
+    </React.Fragment>
   );
 }
 
-function AdminTemplate({ children }: IAdminTemplateProps) {
-  return <Template specificTemplate={<AdminOptions />}>{children}</Template>;
+function AdminTemplate({ onLogout, children }: IAdminTemplateProps) {
+  return (
+    <Template specificTemplate={<AdminOptions onLogout={onLogout} />}>
+      {children}
+    </Template>
+  );
 }
 
 function UserOptions({ onLoginRequired }: any) {
@@ -107,9 +124,10 @@ function Template({ children, specificTemplate }: ITemplateProps) {
 
 interface ILoginPopupProps {
   onSuccess: () => void;
+  onHide: () => void;
 }
 
-function LoginPopup({ onSuccess, ...rest }: ILoginPopupProps) {
+function LoginPopup({ onSuccess, onHide, ...rest }: ILoginPopupProps) {
   const [isError, setIsError] = React.useState(false);
   const [isFormInvalid, setIsFormInvalid] = React.useState(false);
   const [isAuthenticating, setIsAuthenticating] = React.useState(false);
@@ -156,9 +174,9 @@ function LoginPopup({ onSuccess, ...rest }: ILoginPopupProps) {
         aria-labelledby="contained-modal-title-vcenter"
         centered
         show
-        onHide={() => {}}
+        onHide={onHide}
       >
-        <Modal.Header>
+        <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
             <FormattedMessage id="app.loginHeader" />
           </Modal.Title>
@@ -218,14 +236,28 @@ function AppTemplate({ children, isSecure }: IAppTemplateProps) {
   const onSuccess = () => {
     setIsLoginRequired(false);
   };
+  const onHide = () => {
+    setIsLoginRequired(false);
+  };
+
+  const onLogout = () => {
+    UserService.logout();
+    setIsLoginRequired(true);
+  };
+
   if (isLoggedIn) {
     const isAdmin = UserService.isAdmin();
     return (
       <React.Fragment>
         {isAdmin && (
-          <AdminTemplate onLoginRequired={onLoginRequired}>
-            {children}
-          </AdminTemplate>
+          <UserProvider>
+            <AdminTemplate
+              onLogout={onLogout}
+              onLoginRequired={onLoginRequired}
+            >
+              {children}
+            </AdminTemplate>
+          </UserProvider>
         )}
         {!isAdmin && (
           <UserTemplate onLoginRequired={onLoginRequired}>
@@ -250,7 +282,7 @@ function AppTemplate({ children, isSecure }: IAppTemplateProps) {
           <FormattedMessage id="app.name" />
         </Navbar.Brand>
       </Navbar>
-      {isLoginRequired && <LoginPopup onSuccess={onSuccess} />}
+      {isLoginRequired && <LoginPopup onSuccess={onSuccess} onHide={onHide} />}
     </React.Fragment>
   );
 }
