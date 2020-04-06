@@ -15,6 +15,8 @@ export default {
     'app,addAdmin.successMessage': 'Admin Created Successfully',
     'app.uploadInfectedPlaces': 'Upload Infected Data',
     'app.uploadGoogleTakeout.link': 'Upload Your Visited Places',
+    'app.showInstructions': 'Show Instructions',
+    'app.hideInstructions': 'Hide Instructions',
     'app.isFetchingVisitPlaces': 'Fetching your visited places to plot on Map.',
     'help.uploadfile.pastweeks':
       'Upload data of 3 weeks prior to the date of infection',
