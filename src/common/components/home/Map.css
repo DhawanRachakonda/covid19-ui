@@ -39,3 +39,11 @@
   background-color: transparent;
   color: #721c24;
 }
+
+.red-icon {
+  z-index: 999 !important;
+}
+
+.blue-icon {
+  z-index: 9999 !important;
+}

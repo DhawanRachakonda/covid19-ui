@@ -1,11 +1,12 @@
 import React from 'react';
 
 import Map from './Map';
+import { UploadVisitedPlacesContextProder } from '../providers/UploadUserVisitedPlacesProvider';
 
 export default () => {
   return (
-    <React.Fragment>
+    <UploadVisitedPlacesContextProder>
       <Map />
-    </React.Fragment>
+    </UploadVisitedPlacesContextProder>
   );
 };

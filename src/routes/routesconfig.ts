@@ -4,7 +4,10 @@ import { lazy } from 'react';
 const AdminPage = lazy(() => import('../common/components/admin'));
 const PageNotFound = lazy(() => import('../common/components/page_not_found'));
 const Home = lazy(() => import('../common/components/home'));
-const AddAdminPage  = lazy(() => import('../common/components/admin/AddAdmin'));
+const AddAdminPage = lazy(() => import('../common/components/admin/AddAdmin'));
+const UploadUserVisistedPlaces = lazy(() =>
+  import('../common/components/home/visited-places')
+);
 
 export default [
   // {
@@ -33,6 +36,10 @@ export default [
   {
     path: paths.addAdmin.path,
     Component: AddAdminPage
+  },
+  {
+    path: paths.uploadGoogleTakeOut.path,
+    Component: UploadUserVisistedPlaces
   },
   {
     path: '*',

@@ -15,8 +15,7 @@ import SuccessToaster, { FailureToaster } from '../toaster/SuccessToaster';
 import { useAppDispatch, useAppFormState } from './AppContext';
 import ApplyFilter from './AppFilter';
 import AppRTG from '../report/AppRTG';
-
-const SCALAR_E7 = 0.0000001;
+import { useUploadUserVisitedPlaces } from '../providers/UploadUserVisitedPlacesProvider';
 
 function uploadFileTooltip({ ...rest }) {
   return (
@@ -67,8 +66,6 @@ function disableFullScreen({ ...rest }) {
 }
 
 function UploadFileIcon() {
-  const dispatch = useAppDispatch();
-
   const [isToShake, setIsToShake] = useState(false);
 
   let timerId;
@@ -91,93 +88,13 @@ function UploadFileIcon() {
     }
   }, [setIsToShake]);
 
-  const [errorObject, setErrorObject] = React.useState({
-    isErrorOccurred: false,
-    errorMessage: ''
-  });
-
-  const [isFetchingVisitPlaces, setIsFetchingVisitPlaces] = React.useState(
-    false
-  );
-
   const fileInput = React.useRef(null);
 
-  const uploadVisitedPlaces = React.useCallback(
-    (e) => {
-      if (!e.currentTarget.files[0]) return;
-      dispatch({
-        type: 'RESET_PLACES_VISITED'
-      });
-      setIsFetchingVisitPlaces(true);
-      const file = e.currentTarget.files[0];
-      var reader = new FileReader();
-      reader.readAsText(file, 'UTF-8');
-      reader.onload = function(evt) {
-        try {
-          const { timelineObjects = [] } = JSON.parse(evt.target.result);
-          const placesVisited = timelineObjects.map((object, index) => {
-            const {
-              placeVisit = { location: { name: '' }, duration: {} }
-            } = object;
-            let reportedOn = '';
-            if (
-              placeVisit.duration.startTimestampMs &&
-              !isNaN(Number(placeVisit.duration.startTimestampMs))
-            ) {
-              const reportedDateTime = new Date(
-                Number(placeVisit.duration.startTimestampMs)
-              );
-              // Format : DD-MM-YYYY
-              const date = `0${reportedDateTime.getDate()}`.slice(-2);
-              const month = `0${reportedDateTime.getMonth() + 1}`.slice(-2);
-              reportedOn = `${date}-${month}-${reportedDateTime.getFullYear()}`;
-            }
-            return {
-              latitude: placeVisit.location.latitudeE7
-                ? placeVisit.location.latitudeE7 * SCALAR_E7
-                : 0,
-              longitude: placeVisit.location.longitudeE7
-                ? placeVisit.location.longitudeE7 * SCALAR_E7
-                : 0,
-              addressName: placeVisit.location.address
-                ? `${placeVisit.location.name}\n${placeVisit.location.address}`
-                : '',
-              dateField: reportedOn,
-              id: placeVisit.location.placeId + index
-            };
-          });
-          dispatch({
-            type: 'SET_PLACES_VISITED',
-            payload: {
-              data: placesVisited
-            }
-          });
-        } catch (error) {
-          setErrorObject({
-            isErrorOccurred: true,
-            errorMessage: error.message
-          });
-          setTimeout(
-            () => setErrorObject({ isErrorOccurred: false, errorMessage: '' }),
-            3000
-          );
-        }
-        setIsFetchingVisitPlaces(false);
-      };
-      reader.onerror = function(evt) {
-        setIsFetchingVisitPlaces(false);
-        setErrorObject({
-          isErrorOccurred: true,
-          errorMessage: 'error Reading File'
-        });
-        setTimeout(
-          () => setErrorObject({ isErrorOccurred: false, errorMessage: '' }),
-          3000
-        );
-      };
-    },
-    [dispatch]
-  );
+  const {
+    isFetchingVisitPlaces,
+    errorObject,
+    uploadVisitedPlaces
+  } = useUploadUserVisitedPlaces();
 
   return (
     <Form.File custom>

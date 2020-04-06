@@ -9,6 +9,11 @@ export default {
     link: '/add-admin',
     path: '/add-admin'
   },
+  uploadGoogleTakeOut: {
+    routeLink: '#uploadVisitedPlaces',
+    link: '/uploadVisitedPlaces',
+    path: '/uploadVisitedPlaces'
+  },
   home: {
     routeLink: '',
     link: '/',

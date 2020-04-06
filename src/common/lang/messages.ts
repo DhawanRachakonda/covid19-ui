@@ -4,6 +4,7 @@ export default {
     'app.registerUserText': 'Register Admin',
     'app.registerAdmin': 'Register Admin',
     'app.loginHeader': 'Login',
+    'app.closeButton': 'Close',
     'app.adminLogin.btn': 'Login As Admin',
     'app.applyFiltersOnMap': 'Apply Filters On Map',
     'app.applyFiltersOnMap.clear': 'Clear all filters',
@@ -13,6 +14,7 @@ export default {
     'app.applyFiltersOnMap.resetBtn': 'Reset',
     'app,addAdmin.successMessage': 'Admin Created Successfully',
     'app.uploadInfectedPlaces': 'Upload Infected Data',
+    'app.uploadGoogleTakeout.link': 'Upload Your Visited Places',
     'app.isFetchingVisitPlaces': 'Fetching your visited places to plot on Map.',
     'help.uploadfile.pastweeks':
       'Upload data of 3 weeks prior to the date of infection',

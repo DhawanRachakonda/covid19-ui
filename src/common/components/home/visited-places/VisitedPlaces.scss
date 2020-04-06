@@ -1,0 +1,22 @@
+.user-upload--modal {
+  .custom-file {
+    position: relative;
+    left: 35%;
+    width: 60%;
+  }
+
+  .custom-file-input {
+    display: none;
+  }
+
+  .google-takeout--img-wrapper {
+    margin: 2rem 2rem 2rem 2rem;
+    border-radius: 2rem;
+    border-color: black;
+
+    .google-takeout--img {
+      width: 100%;
+      height: 100vh;
+    }
+  }
+}

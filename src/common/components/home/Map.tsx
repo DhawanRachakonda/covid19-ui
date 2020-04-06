@@ -1,13 +1,6 @@
 import * as React from 'react';
 import { useAppFormState, useAppDispatch } from './AppContext';
-import {
-  Map,
-  TileLayer,
-  Marker,
-  Popup,
-  LayersControl,
-  ZoomControl
-} from 'react-leaflet';
+import { Map, TileLayer, Marker, Popup, ZoomControl } from 'react-leaflet';
 import { Card } from 'react-bootstrap';
 import { DivIcon } from 'leaflet';
 
@@ -18,14 +11,16 @@ import MapControl from './MapControl';
 const RedIcon = new DivIcon({
   html: `<svg class="bi bi-circle-fill" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
   <circle cx="8" cy="8" r="8"/>
-</svg>`
+</svg>`,
+  className: 'red-icon'
 });
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const BlueIcon = new DivIcon({
-  html: `<svg class="bi bi-circle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="blue" xmlns="http://www.w3.org/2000/svg">
+  html: `<svg class="bi bi-circle-fill" width="1em" height="1em"  viewBox="0 0 16 16" fill="blue" xmlns="http://www.w3.org/2000/svg">
   <circle cx="8" cy="8" r="8"/>
-</svg>`
+</svg>`,
+  className: 'blue-icon'
 });
 
 interface IPlaceListOnMapProps {
@@ -111,6 +106,25 @@ function PlaceListOnMap({ placeList }: IPlaceListOnMapProps) {
 }
 
 function MapView() {
+  const [center, setCenter] = React.useState<[number, number]>([
+    17.385,
+    78.4867
+  ]);
+
+  React.useEffect(() => {
+    const setPosition: PositionCallback = (position) => {
+      setCenter([position.coords.latitude, position.coords.longitude]);
+    };
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(setPosition);
+    } else {
+      alert(
+        'Geolocation is not supported by this browser. It is used to get your current location.'
+      );
+    }
+  }, []);
+
   const {
     infectedList,
     placesVisited,
@@ -139,7 +153,7 @@ function MapView() {
   return (
     <React.Fragment>
       <Map
-        center={[17.385, 78.4867]}
+        center={center}
         zoomControl={false}
         zoom={8}
         className={`infected-list--map ${opacityClassName}`}
@@ -152,20 +166,6 @@ function MapView() {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
         <ZoomControl position="topright" />
-        <LayersControl position="topright">
-          <LayersControl.BaseLayer name="OpenStreetMap.BlackAndWhite">
-            <TileLayer
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              url="https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png"
-            />
-          </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="OpenStreetMap.Mapnik">
-            <TileLayer
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-          </LayersControl.BaseLayer>
-        </LayersControl>
         <MapControl />
       </Map>
     </React.Fragment>

@@ -47,7 +47,11 @@ function UserOptions({ onLoginRequired }: any) {
 
   return (
     <React.Fragment>
-      <Nav className="mr-auto"></Nav>
+      <Nav className="mr-auto">
+        <Nav.Link href={paths.uploadGoogleTakeOut.routeLink}>
+          <FormattedMessage id="app.uploadGoogleTakeout.link" />
+        </Nav.Link>
+      </Nav>
       <Nav className="justify-content-end" activeKey="/home">
         <Nav.Item className="line-height--none">
           <Button
