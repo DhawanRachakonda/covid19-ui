@@ -1,73 +1,73 @@
 @font-face {
   font-family: 'HoneywellSansWeb-Light';
   src: local('HoneywellSansWeb-Light'),
-    url(./fonts/HoneywellSansWeb-Light.ttf) format('ttf');
+    url(/fonts/HoneywellSansWeb-Light.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'HoneywellSansWeb-Black';
   src: local('HoneywellSansWeb-Black'),
-    url(./fonts/HoneywellSansWeb-Black.ttf) format('ttf');
+    url(/fonts/HoneywellSansWeb-Black.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'HoneywellSansWeb-BlackItalic';
   src: local('HoneywellSansWeb-BlackItalic'),
-    url(./fonts/HoneywellSansWeb-BlackItalic.ttf) format('ttf');
+    url(/fonts/HoneywellSansWeb-BlackItalic.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'HoneywellSansWeb-Bold';
   src: local('HoneywellSansWeb-Bold'),
-    url(./fonts/HoneywellSansWeb-Bold.ttf) format('ttf');
+    url(/fonts/HoneywellSansWeb-Bold.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'HoneywellSansWeb-BoldItalic';
   src: local('HoneywellSansWeb-BoldItalic'),
-    url(./fonts/HoneywellSansWeb-BoldItalic.ttf) format('ttf');
+    url(/fonts/HoneywellSansWeb-BoldItalic.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'HoneywellSansWeb-Book';
   src: local('HoneywellSansWeb-Book'),
-    url(./fonts/HoneywellSansWeb-Book.ttf) format('ttf');
+    url(/fonts/HoneywellSansWeb-Book.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'HoneywellSansWeb-BookItalic';
   src: local('HoneywellSansWeb-BookItalic'),
-    url(./fonts/HoneywellSansWeb-BookItalic.ttf) format('ttf');
+    url(/fonts/HoneywellSansWeb-BookItalic.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'HoneywellSansWeb-Extrabold';
   src: local('HoneywellSansWeb-Extrabold'),
-    url(./fonts/HoneywellSansWeb-Extrabold.ttf) format('ttf');
+    url(/fonts/HoneywellSansWeb-Extrabold.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'HoneywellSansWeb-ExtraboldItalic';
   src: local('HoneywellSansWeb-ExtraboldItalic'),
-    url(./fonts/HoneywellSansWeb-ExtraboldItalic.ttf) format('ttf');
+    url(/fonts/HoneywellSansWeb-ExtraboldItalic.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'HoneywellSansWeb-LightItalic';
   src: local('HoneywellSansWeb-LightItalic'),
-    url(./fonts/HoneywellSansWeb-LightItalic.ttf) format('ttf');
+    url(/fonts/HoneywellSansWeb-LightItalic.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'HoneywellSansWeb-Medium';
   src: local('HoneywellSansWeb-Medium'),
-    url(./fonts/HoneywellSansWeb-Medium.ttf) format('ttf');
+    url(/fonts/HoneywellSansWeb-Medium.ttf) format('ttf');
 }
 
 @font-face {
   font-family: 'HoneywellSansWeb-MediumItalic';
   src: local('HoneywellSansWeb-MediumItalic'),
-    url(./fonts/HoneywellSansWeb-MediumItalic.ttf) format('ttf');
+    url(/fonts/HoneywellSansWeb-MediumItalic.ttf) format('ttf');
 }
 
 body {
