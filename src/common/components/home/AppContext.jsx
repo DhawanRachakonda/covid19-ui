@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import ReportCase from '../model/ReportCase';
+import UserService from '../../../services/user-services';
 
 const AppStateContext = React.createContext(undefined);
 const AppDispatchContext = React.createContext(undefined);
@@ -17,7 +18,8 @@ const initialState = {
   loginUserName: '',
   loginUserEmail: '',
   showRTG: false,
-  reportCase: new ReportCase()
+  reportCase: new ReportCase(),
+  isLoggedIn: UserService.isUserLoggedIn()
 };
 
 function AppReducer(state, action) {
@@ -80,6 +82,16 @@ function AppReducer(state, action) {
         ...state,
         loginUserName: action.payload.nameValue,
         loginUserEmail: action.payload.emailValue
+      };
+    case 'SET_LOGGED_IN':
+      return {
+        ...state,
+        isLoggedIn: true
+      };
+    case 'LOG_OUT':
+      return {
+        ...state,
+        isLoggedIn: false
       };
     default:
       return state;

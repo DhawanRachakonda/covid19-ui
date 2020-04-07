@@ -13,17 +13,15 @@ import { AppProvider } from './common/components/home/AppContext';
 function AppEntry() {
   return (
     <AppProvider>
-      <AppTemplate>
-        <Router>
-          <Suspense fallback={<ComponentLoader />}>
-            <Switch>
-              {routes.map((route, i) => (
-                <RouteWithSubRoutes key={i} {...route} />
-              ))}
-            </Switch>
-          </Suspense>
-        </Router>
-      </AppTemplate>
+      <Router>
+        <Suspense fallback={<ComponentLoader />}>
+          <Switch>
+            {routes.map((route, i) => (
+              <RouteWithSubRoutes key={i} {...route} />
+            ))}
+          </Switch>
+        </Suspense>
+      </Router>
     </AppProvider>
   );
 }
@@ -39,7 +37,9 @@ function RouteWithSubRoutes(route: any) {
         path={route.path}
         render={(props: any) => (
           // pass the sub-routes down to keep nesting
-          <route.Component {...props} routes={route.routes} />
+          <AppTemplate {...props}>
+            <route.Component {...props} routes={route.routes} />
+          </AppTemplate>
         )}
       />
     );
@@ -49,7 +49,9 @@ function RouteWithSubRoutes(route: any) {
       path={route.path}
       render={(props: any) => (
         // pass the sub-routes down to keep nesting
-        <route.Component {...props} routes={route.routes} />
+        <AppTemplate {...route}>
+          <route.Component {...props} routes={route.routes} />
+        </AppTemplate>
       )}
     />
   );

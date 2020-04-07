@@ -31,11 +31,13 @@ export default [
   },
   {
     path: paths.admin.path,
-    Component: AdminPage
+    Component: AdminPage,
+    isSecure: true
   },
   {
     path: paths.addAdmin.path,
-    Component: AddAdminPage
+    Component: AddAdminPage,
+    isSecure: true
   },
   {
     path: paths.uploadGoogleTakeOut.path,

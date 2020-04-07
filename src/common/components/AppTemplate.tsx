@@ -16,6 +16,7 @@ import { FailureToaster } from './toaster/SuccessToaster';
 import paths from '../../routes/paths';
 import Loader from './loaders';
 import { UserProvider, useUserState } from './providers/UserProvider';
+import { useAppDispatch, useAppFormState } from './home/AppContext';
 
 interface IAdminTemplateProps {
   children: React.ReactNode;
@@ -228,14 +229,20 @@ interface IAppTemplateProps {
 function AppTemplate({ children, isSecure }: IAppTemplateProps) {
   const [isLoginRequired, setIsLoginRequired] = React.useState<boolean>(false);
 
+  const dispatch = useAppDispatch();
+
   const onLoginRequired = React.useCallback(() => {
     setIsLoginRequired(true);
   }, [setIsLoginRequired]);
 
-  const isLoggedIn = UserService.isUserLoggedIn();
+  const { isLoggedIn } = useAppFormState();
 
   const onSuccess = () => {
     setIsLoginRequired(false);
+    dispatch({
+      type: 'SET_LOGGED_IN',
+      payload: {}
+    });
   };
   const onHide = () => {
     setIsLoginRequired(false);
@@ -243,7 +250,10 @@ function AppTemplate({ children, isSecure }: IAppTemplateProps) {
 
   const onLogout = () => {
     UserService.logout();
-    setIsLoginRequired(true);
+    dispatch({
+      type: 'LOG_OUT',
+      payload: {}
+    });
   };
 
   if (isLoggedIn) {
@@ -283,7 +293,9 @@ function AppTemplate({ children, isSecure }: IAppTemplateProps) {
           <FormattedMessage id="app.name" />
         </Navbar.Brand>
       </Navbar>
-      {isLoginRequired && <LoginPopup onSuccess={onSuccess} onHide={onHide} />}
+      {(isLoginRequired || isSecure) && (
+        <LoginPopup onSuccess={onSuccess} onHide={onHide} />
+      )}
     </React.Fragment>
   );
 }

@@ -29,7 +29,6 @@ function AddAdmin() {
         e.target.form.elements.password.value
       );
       if (response.username) {
-        UserService.saveUserToken(response);
         setIsSuccess(true);
         setTimeout(() => onSuccess(), 2000);
       } else {
