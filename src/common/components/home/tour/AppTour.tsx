@@ -9,6 +9,10 @@ import SuccessToaster, { FailureToaster } from '../../toaster/SuccessToaster';
 function AppTour() {
   const [show, setShow] = React.useState(true);
 
+  
+
+  const handleClose = () => setShow(false);
+
   const onHide = () => {
     localStorage.userTookTour = 'yes';
     setShow(false);
@@ -31,7 +35,8 @@ function AppTour() {
       show={show}
       onHide={onHide}
     >
-      <Modal.Body>
+      
+      <Modal.Body >
         <FormattedHTMLMessage id="appTour.heading" />
         <p className="description">
           <FormattedHTMLMessage id="appTour.message.description" />
@@ -53,9 +58,12 @@ function AppTour() {
                 onHide();
               }}
             />
+            
             <Button variant="light" onClick={() => fileInput.current.click()}>
               Upload Visited Places
-            </Button>
+            </Button><br/>
+            <Button variant="light" onClick={handleClose} style={{marginLeft:'4em'}}>Close</Button>
+            
           </Form.File>
         </p>
       </Modal.Body>

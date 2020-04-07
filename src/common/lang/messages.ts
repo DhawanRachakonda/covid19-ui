@@ -1,7 +1,7 @@
 export default {
   'en-US': {
     'app.name': 'Incubation Tracker',
-    'app.redIcon.describe': 'Infected Areas',
+    'app.redIcon.describe': 'Infected Areas - Click on hotspots to show more information',
     'app.blueIcon.describe': 'Places You Visited',
     'app.registerUserText': 'Register Admin',
     'app.registerAdmin': 'Register Admin',

@@ -169,7 +169,7 @@ function MapView() {
         <ZoomControl position="topright" />
         <MapControl />
       </Map>
-      <div className="d-flex justify-content-center margin-top--0_5">
+      <div className={`legend-styles`}>
         {infectedList && infectedList.length > 0 && (
           <React.Fragment>
             <svg
