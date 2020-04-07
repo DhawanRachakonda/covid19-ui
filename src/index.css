@@ -41,28 +41,25 @@ code {
 }
 
 .intersect {
-  animation: focuses 1500ms;
+  animation: focuses 1000ms;
   animation-iteration-count: infinite;
 }
 
 @keyframes focuses {
   0% {
-    -webkit-box-shadow: 0 0 8px #022351;
-    -moz-box-shadow: 0 0 8px #022351;
-    box-shadow: 0 0 8px #022351;
-    border-radius: 1rem;
+    -webkit-box-shadow: 0 0 10px #022351;
+    -moz-box-shadow: 0 0 10px #022351;
+    box-shadow: 0 0 10px #022351;
   }
   50% {
     -webkit-box-shadow: 0 0 0 #022351;
     -moz-box-shadow: 0 0 0 #022351;
     box-shadow: 0 0 0 #022351;
-    border-radius: 1rem;
   }
   100% {
-    -webkit-box-shadow: 0 0 1rem #022351;
-    -moz-box-shadow: 0 0 1rem #022351;
-    box-shadow: 0 0 8px #022351;
-    border-radius: 1rem;
+    -webkit-box-shadow: 0 0 10px #022351;
+    -moz-box-shadow: 0 0 10px #022351;
+    box-shadow: 0 0 10px #022351;
   }
 }
 
