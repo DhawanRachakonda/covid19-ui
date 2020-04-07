@@ -36,7 +36,9 @@
 }
 
 .infected-list--map {
-  margin-top: 2rem;
+  margin-top: 0em;
+  height: 656px!important;
+
 }
 
 .leaflet-container {
@@ -70,4 +72,12 @@
   color: black;
   opacity: 0.7;
   padding: 4px;
+}
+
+.container {
+  padding: 0px!important;
+}
+
+.leaflet-top{
+  margin-top: 70px!important;
 }
