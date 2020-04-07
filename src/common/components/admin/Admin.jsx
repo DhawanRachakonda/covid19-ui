@@ -120,10 +120,9 @@ function uploadFromGoogleTakeOutToolTip({ ...rest }) {
 
 function UploadFromGoogle() {
 
-  const [displayValue,setDisplayValue] = React.useState('block');
+  const [displayValue,setDisplayValue] = React.useState('none');
   const handleClick = (e) =>{
-    e.preventDefault();
-    setDisplayValue('none');
+    setDisplayValue('block');
   }
 
   return (
