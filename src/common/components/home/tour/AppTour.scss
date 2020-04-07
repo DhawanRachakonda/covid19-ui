@@ -1,0 +1,46 @@
+.app-tour {
+  .modal-dialog {
+    margin-left: 5rem !important;
+
+    .modal-content {
+      background-clip: padding-box;
+      border: none;
+      border-radius: 0;
+      background-color: #264167;
+      color: white;
+      width: 20rem;
+
+      .btn-light {
+        font-weight: bold;
+        font-size: smaller;
+        text-transform: uppercase;
+        border-radius: unset;
+        padding: 0.4rem 1rem;
+        margin-top: 1rem;
+      }
+
+      .modal-body {
+        .safe {
+          font-weight: bolder;
+        }
+
+        .description {
+          margin-top: 1rem;
+          font-size: smaller;
+        }
+
+        .custom-file {
+          position: unset;
+          display: block;
+          width: auto;
+          height: unset;
+          margin-bottom: 0;
+
+          .custom-file-input {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

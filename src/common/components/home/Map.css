@@ -1,6 +1,9 @@
 .leaflet-control .custom.custom-file {
   width: 0;
-  top: -15.5px;
+  top: -10px;
+}
+
+.custom.custom-file {
 }
 
 .leaflet-control .custom.custom-file .custom-file-input {
@@ -14,6 +17,17 @@
   background-color: transparent;
   border-color: transparent;
   color: black;
+}
+
+.upload-file--previous-data {
+  top: 0.5rem;
+  left: 0.6rem;
+  position: relative;
+}
+
+.filter-icon {
+  position: relative;
+  top: 0.5rem;
 }
 
 #filter-dropdown.dropdown-toggle::after {

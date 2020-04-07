@@ -1,14 +1,15 @@
 import React from 'react';
-import {Card} from 'react-bootstrap';
+//import { Card } from 'react-bootstrap';
 import Map from './Map';
-import { DivIcon } from 'leaflet';
 import { UploadVisitedPlacesContextProder } from '../providers/UploadUserVisitedPlacesProvider';
+import AppTour from './tour/AppTour';
 
 export default () => {
   return (
     <UploadVisitedPlacesContextProder>
+      {!localStorage.userTookTour && <AppTour />}
       <Map />
-      <div> 
+      {/* <div> 
         <Card className="text-center">
         <p>
           <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +19,7 @@ export default () => {
         </p>
         
           </Card>
-      </div>
+      </div> */}
     </UploadVisitedPlacesContextProder>
   );
 };

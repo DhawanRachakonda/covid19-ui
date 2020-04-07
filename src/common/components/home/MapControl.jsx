@@ -111,18 +111,23 @@ function UploadFileIcon() {
         onChange={uploadVisitedPlaces}
       />
       <OverlayTrigger
-        placement="right"
+        placement="left"
         delay={{ show: 250, hide: 400 }}
         overlay={uploadFileTooltip}
         onEnter={() => cancelShake()}
       >
-        <MdFileUpload
-          className={`upload-file--previous-data ${isToShake ? 'shake' : ''}`}
-          style={{ fontSize: 30 }}
-          onClick={() => {
-            fileInput.current.click();
-          }}
-        />
+        <div className="circle">
+          <MdFileUpload
+            className={`upload-file--previous-data center ${
+              isToShake ? 'shake' : ''
+            }`}
+            color="white"
+            style={{ fontSize: 30 }}
+            onClick={() => {
+              fileInput.current.click();
+            }}
+          />
+        </div>
       </OverlayTrigger>
     </Form.File>
   );
@@ -178,27 +183,33 @@ function FilterList() {
         </Form>
       </Modal>
       <OverlayTrigger
-        placement="right"
+        placement="left"
         delay={{ show: 250, hide: 400 }}
         overlay={applyFiltersOnMap}
       >
-        <MdFilterList
-          onClick={() => setIsModalOpen(!isModalOpen)}
-          className="filter-icon display-block"
-          style={{ fontSize: 30 }}
-        />
+        <div className="circle margin-top--1_5">
+          <MdFilterList
+            onClick={() => setIsModalOpen(!isModalOpen)}
+            className="filter-icon center display-block"
+            color="white"
+            style={{ fontSize: 30 }}
+          />
+        </div>
       </OverlayTrigger>
       {filter.date && (
         <OverlayTrigger
-          placement="right"
+          placement="left"
           delay={{ show: 250, hide: 400 }}
           overlay={clearFiltersTooltip}
         >
-          <MdRefresh
-            onClick={reset}
-            className="filter-icon display-block"
-            style={{ fontSize: 30 }}
-          />
+          <div className="circle margin-top--0_5">
+            <MdRefresh
+              onClick={reset}
+              className="filter-icon center display-block"
+              color="white"
+              style={{ fontSize: 30 }}
+            />
+          </div>
         </OverlayTrigger>
       )}
     </React.Fragment>
@@ -218,15 +229,18 @@ function ReportProblem() {
   return (
     <React.Fragment>
       <OverlayTrigger
-        placement="right"
+        placement="left"
         delay={{ show: 250, hide: 400 }}
         overlay={reportACase}
       >
-        <MdReportProblem
-          onClick={showRTGModal}
-          className="margin-top--0_5 filter-icon report-problem display-block"
-          style={{ fontSize: 30 }}
-        />
+        <div className="circle margin-top--0_5">
+          <MdReportProblem
+            onClick={showRTGModal}
+            className="margin-top--0_5 filter-icon report-problem display-block center"
+            color="white"
+            style={{ fontSize: 30 }}
+          />
+        </div>
       </OverlayTrigger>
       <AppRTG />
     </React.Fragment>
@@ -240,34 +254,42 @@ export default function MapControls() {
     <Control position="topright">
       {!isFullScreenEnabled && (
         <OverlayTrigger
-          placement="right"
+          placement="left"
           delay={{ show: 250, hide: 400 }}
           overlay={enableFullScreen}
         >
-          <MdFullscreen
-            className="full-screen display-block"
-            style={{ fontSize: 30 }}
-            onClick={() => {
-              document.querySelector('.infected-list--map').requestFullscreen();
-              setIsFullScreenEnabled(!isFullScreenEnabled);
-            }}
-          />
+          <div className="circle">
+            <MdFullscreen
+              className="full-screen display-block center filter-icon"
+              style={{ fontSize: 30 }}
+              color="white"
+              onClick={() => {
+                document
+                  .querySelector('.infected-list--map')
+                  .requestFullscreen();
+                setIsFullScreenEnabled(!isFullScreenEnabled);
+              }}
+            />
+          </div>
         </OverlayTrigger>
       )}
       {isFullScreenEnabled && (
         <OverlayTrigger
-          placement="right"
+          placement="left"
           delay={{ show: 250, hide: 400 }}
           overlay={disableFullScreen}
         >
-          <MdFullscreenExit
-            className="full-screen--exit display-block"
-            style={{ fontSize: 30 }}
-            onClick={() => {
-              document.exitFullscreen();
-              setIsFullScreenEnabled(!isFullScreenEnabled);
-            }}
-          />
+          <div className="circle">
+            <MdFullscreenExit
+              className="full-screen--exit display-block center filter-icon"
+              style={{ fontSize: 30 }}
+              color="white"
+              onClick={() => {
+                document.exitFullscreen();
+                setIsFullScreenEnabled(!isFullScreenEnabled);
+              }}
+            />
+          </div>
         </OverlayTrigger>
       )}
 

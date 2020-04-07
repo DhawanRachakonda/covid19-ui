@@ -7,6 +7,7 @@ import { DivIcon } from 'leaflet';
 import './Map.css';
 
 import MapControl from './MapControl';
+import { FormattedMessage } from 'react-intl';
 
 const RedIcon = new DivIcon({
   html: `<svg class="bi bi-circle-fill" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
@@ -168,6 +169,43 @@ function MapView() {
         <ZoomControl position="topright" />
         <MapControl />
       </Map>
+      <div className="d-flex justify-content-center margin-top--0_5">
+        {infectedList && infectedList.length > 0 && (
+          <React.Fragment>
+            <svg
+              className="bi bi-circle-fill"
+              width="1.5em"
+              height="1.5em"
+              viewBox="0 0 16 16"
+              fill="red"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="8" cy="8" r="8" />
+            </svg>
+            <span className="margin-left--0_5">
+              <FormattedMessage id="app.redIcon.describe" />
+            </span>
+          </React.Fragment>
+        )}
+
+        {placesVisited && placesVisited.length > 0 && (
+          <React.Fragment>
+            <svg
+              className="bi bi-circle-fill margin-left--0_5"
+              width="1.5em"
+              height="1.5em"
+              viewBox="0 0 16 16"
+              fill="blue"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="8" cy="8" r="8" />
+            </svg>
+            <span className="margin-left--0_5">
+              <FormattedMessage id="app.blueIcon.describe" />
+            </span>
+          </React.Fragment>
+        )}
+      </div>
     </React.Fragment>
   );
 }

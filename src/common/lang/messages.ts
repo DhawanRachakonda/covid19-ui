@@ -1,6 +1,8 @@
 export default {
   'en-US': {
     'app.name': 'Incubation Tracker',
+    'app.redIcon.describe': 'Infected Areas',
+    'app.blueIcon.describe': 'Places You Visited',
     'app.registerUserText': 'Register Admin',
     'app.registerAdmin': 'Register Admin',
     'app.loginHeader': 'Login',
@@ -28,7 +30,20 @@ export default {
     'app.filters.enableFullScreen': 'Enable Full Screen',
     'help.uploadFileFromGoogleTakeOut.toolTip':
       'Click here to navigate to Google Takeout',
-    'help.googleTakeOut.instructions': 'How Google Takeout works?'
+    'help.googleTakeOut.instructions': 'How Google Takeout works?',
+
+    'appTour.heading':
+      '<h2>How<br/><span className="safe">Safe</span> are you?</h2>',
+    // prettier-ignore
+    'appTour.message.description': `<article><section><p>'Coronavirus', which literally translates into the whole world after China quarantined epicenter of the outbreak.</p></section>
+
+ 
+
+    <section><p>During such times, it is out duty as a responsible citizen to keep ourselves healthy and non infected to break the spread of such a novel disease.</p></section>
+    
+     
+    
+    <section><p>This website shows the list of places which the Covid infected places has travelled during his incubation period. If you have been to those places on the same date, please report to the authorities from this website.</p></section></article>`
   },
   hi: {}
 };

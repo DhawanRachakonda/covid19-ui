@@ -102,6 +102,42 @@ code {
   margin-top: 0.5rem;
 }
 
+.margin-top--1 {
+  margin-top: 1rem;
+}
+
+.margin-top--1_5 {
+  margin-top: 1.5rem;
+}
+
 .margin-left--7 {
   margin-left: 7rem;
+}
+
+.margin-left--0_5 {
+  margin-left: 0.5rem;
+}
+
+.margin-left--5rem {
+  margin-left: 5rem;
+}
+
+.max-width--100-imp {
+  max-width: 100% !important;
+}
+
+#app-header {
+  background-color: #022351 !important;
+}
+
+.circle {
+  height: 3rem;
+  width: 3rem;
+  background-color: #1e3a60;
+  border-radius: 50%;
+  display: block;
+}
+
+.center {
+  margin: auto;
 }

@@ -114,12 +114,16 @@ function Template({ children, specificTemplate }: ITemplateProps) {
     <React.Fragment>
       <Navbar bg="dark" variant="dark" id="app-header">
         <Navbar.Brand href="/">
-        <img src="/images/favicon-32X32.png" style={{marginRight : '0.5em'}}/>
+          <img
+            alt="Incubation Tracker"
+            src="/images/favicon-32X32.png"
+            style={{ marginRight: '0.5em' }}
+          />
           <FormattedMessage id="app.name" />
         </Navbar.Brand>
         {specificTemplate}
       </Navbar>
-      <Container>{children}</Container>
+      <Container className="max-width--100-imp">{children}</Container>
     </React.Fragment>
   );
 }
