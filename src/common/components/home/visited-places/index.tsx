@@ -5,7 +5,7 @@ import { UploadVisitedPlacesContextProder } from '../../providers/UploadUserVisi
 
 function UploadUserVisitedPlacesHome() {
   return (
-    <UploadVisitedPlacesContextProder>
+    <UploadVisitedPlacesContextProder bindedFor="visitedPlacesModal">
       <UploadUserVisitedPlacesModal />
       <Map />
     </UploadVisitedPlacesContextProder>

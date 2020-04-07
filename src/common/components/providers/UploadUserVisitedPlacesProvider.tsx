@@ -5,11 +5,12 @@ declare type UserUploadVisitedPlacesType = {
   setIsFetchingVisitPlaces:
     | React.Dispatch<React.SetStateAction<boolean>>
     | Function;
-  uploadVisitedPlaces: (e: any) => void;
+  uploadVisitedPlaces: (e: any, callback: (status: boolean) => void) => void;
   isFetchingVisitPlaces: boolean;
   errorObject: {
     isErrorOccurred: boolean;
     errorMessage: string;
+    bindedFor: string;
   };
 };
 
@@ -19,7 +20,8 @@ const initialContext: UserUploadVisitedPlacesType = {
   isFetchingVisitPlaces: false,
   errorObject: {
     isErrorOccurred: false,
-    errorMessage: ''
+    errorMessage: '',
+    bindedFor: ''
   }
 };
 
@@ -27,12 +29,21 @@ const SCALAR_E7 = 0.0000001;
 
 const UploadUserVisitedPlacesContext = React.createContext(initialContext);
 
-function UploadVisitedPlacesContextProder({ children }: any) {
+interface IUploadVisitedPlacesContextProviderProps {
+  children: React.ReactNode;
+  bindedFor: string;
+}
+
+function UploadVisitedPlacesContextProder({
+  children,
+  bindedFor
+}: IUploadVisitedPlacesContextProviderProps) {
   const dispatch = useAppDispatch();
 
   const [errorObject, setErrorObject] = React.useState({
     isErrorOccurred: false,
-    errorMessage: ''
+    errorMessage: '',
+    bindedFor: ''
   });
 
   const [isFetchingVisitPlaces, setIsFetchingVisitPlaces] = React.useState(
@@ -40,7 +51,7 @@ function UploadVisitedPlacesContextProder({ children }: any) {
   );
 
   const uploadVisitedPlaces = React.useCallback(
-    (e) => {
+    (e, callback) => {
       if (!e.currentTarget.files[0]) return;
       dispatch({
         type: 'RESET_PLACES_VISITED'
@@ -53,6 +64,11 @@ function UploadVisitedPlacesContextProder({ children }: any) {
         try {
           const result = String(evt.target?.result);
           const { timelineObjects = [] } = JSON.parse(result);
+          if (timelineObjects.length === 0) {
+            throw new Error(
+              'Unable to Fetch visited places, upload file that contains information!'
+            );
+          }
           const placesVisited = timelineObjects.map(
             (object: any, index: number) => {
               const {
@@ -92,13 +108,21 @@ function UploadVisitedPlacesContextProder({ children }: any) {
               data: placesVisited
             }
           });
+          callback && callback(true);
         } catch (error) {
           setErrorObject({
             isErrorOccurred: true,
-            errorMessage: error.message
+            errorMessage: error.message,
+            bindedFor
           });
+          callback && callback(false);
           setTimeout(
-            () => setErrorObject({ isErrorOccurred: false, errorMessage: '' }),
+            () =>
+              setErrorObject({
+                isErrorOccurred: false,
+                errorMessage: '',
+                bindedFor
+              }),
             3000
           );
         }
@@ -108,10 +132,17 @@ function UploadVisitedPlacesContextProder({ children }: any) {
         setIsFetchingVisitPlaces(false);
         setErrorObject({
           isErrorOccurred: true,
-          errorMessage: 'error Reading File'
+          errorMessage: 'error Reading File',
+          bindedFor
         });
+        callback && callback(false);
         setTimeout(
-          () => setErrorObject({ isErrorOccurred: false, errorMessage: '' }),
+          () =>
+            setErrorObject({
+              isErrorOccurred: false,
+              errorMessage: '',
+              bindedFor
+            }),
           3000
         );
       };

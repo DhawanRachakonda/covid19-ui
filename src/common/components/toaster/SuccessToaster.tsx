@@ -14,7 +14,8 @@ function SuccessToaster({ message }: ISuccessToaster) {
         top: 0,
         right: 0,
         backgroundColor: '#d4edda',
-        color: '#155724'
+        color: '#155724',
+        zIndex: 9
       }}
       animation={true}
       delay={3000}
@@ -44,7 +45,8 @@ export function FailureToaster({ message }: IFailureToaster) {
         top: 0,
         right: 0,
         backgroundColor: '#f8d7da',
-        color: '#721c24'
+        color: '#721c24',
+        zIndex: 9
       }}
       animation={true}
       delay={3000}

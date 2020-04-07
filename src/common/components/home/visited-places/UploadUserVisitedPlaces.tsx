@@ -29,9 +29,14 @@ function UploadUserVisitedPlacesModal() {
     uploadVisitedPlaces
   } = useUploadUserVisitedPlaces();
 
+  const onUploadCallBack = (status: boolean) => {
+    if (status) {
+      onHide();
+    }
+  };
+
   const onUplaodClick = (e: any) => {
-    uploadVisitedPlaces(e);
-    onHide();
+    uploadVisitedPlaces(e, onUploadCallBack);
   };
 
   const onHide = useCallback(() => {
@@ -51,9 +56,10 @@ function UploadUserVisitedPlacesModal() {
       {isFetchingVisitPlaces && (
         <SuccessToaster message="app.isFetchingVisitPlaces" />
       )}
-      {errorObject.isErrorOccurred && (
-        <FailureToaster message={errorObject.errorMessage} />
-      )}
+      {errorObject.isErrorOccurred &&
+        errorObject.bindedFor === 'visitedPlacesModal' && (
+          <FailureToaster message={errorObject.errorMessage} />
+        )}
       <Form>
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
@@ -66,7 +72,7 @@ function UploadUserVisitedPlacesModal() {
               <Form.File.Label>
                 <FormattedMessage id="app.uploadGoogleTakeout.link" />
               </Form.File.Label>
-              <Form.File.Input onChange={onUplaodClick} />
+              <Form.File.Input onChange={onUplaodClick} accept=".json" />
             </Form.File>
             <Form.Text className="text-muted">
               <a

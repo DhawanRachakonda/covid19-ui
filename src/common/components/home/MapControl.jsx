@@ -103,7 +103,7 @@ function UploadFileIcon() {
       {isFetchingVisitPlaces && (
         <SuccessToaster message="app.isFetchingVisitPlaces" />
       )}
-      {errorObject.isErrorOccurred && (
+      {errorObject.isErrorOccurred && errorObject.bindedFor === 'home' && (
         <FailureToaster message={errorObject.errorMessage} />
       )}
       <Form.File.Input
