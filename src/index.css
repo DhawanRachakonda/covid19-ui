@@ -136,6 +136,7 @@ code {
   background-color: #1e3a60;
   border-radius: 50%;
   display: block;
+  opacity: 0.8;
 }
 
 .center {
