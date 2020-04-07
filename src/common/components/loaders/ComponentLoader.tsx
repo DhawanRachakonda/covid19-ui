@@ -2,12 +2,19 @@ import React from 'react';
 import { Spinner } from 'react-bootstrap';
 
 import './component-loader.css';
+import { Template } from '../AppTemplate';
+
+function SpecificTemplate() {
+  return <div></div>;
+}
 
 export function ComponentLoader() {
   return (
-    <div className="component-spinner">
-      <Loader />
-    </div>
+    <Template specificTemplate={<SpecificTemplate />}>
+      <div className="component-spinner">
+        <Loader />
+      </div>
+    </Template>
   );
 }
 

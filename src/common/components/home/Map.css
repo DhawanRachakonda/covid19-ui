@@ -37,8 +37,7 @@
 
 .infected-list--map {
   margin-top: 0em;
-  height: 656px!important;
-
+  height: 90vh !important;
 }
 
 .leaflet-container {
@@ -66,8 +65,8 @@
 
 .legend-styles {
   z-index: 100000 !important;
-  margin-top: -2em!important;
-  position: relative!important;
+  margin-top: -2em !important;
+  position: relative !important;
   background-color: white;
   color: black;
   opacity: 0.7;
@@ -75,9 +74,9 @@
 }
 
 .container {
-  padding: 0px!important;
+  padding: 0px !important;
 }
 
-.leaflet-top{
-  margin-top: 70px!important;
+.leaflet-top {
+  margin-top: 70px !important;
 }

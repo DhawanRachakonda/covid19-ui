@@ -13,7 +13,9 @@ import messages from './common/lang/messages';
 render(
   <IntlProvider
     locale={navigator.language}
-    messages={(messages as any)[navigator.language]}
+    messages={
+      (messages as any)[navigator.language] || (messages as any)['en-US']
+    }
   >
     <App />
   </IntlProvider>,

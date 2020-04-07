@@ -109,7 +109,7 @@ interface ITemplateProps {
   specificTemplate: JSX.Element;
 }
 
-function Template({ children, specificTemplate }: ITemplateProps) {
+export function Template({ children, specificTemplate }: ITemplateProps) {
   return (
     <React.Fragment>
       <Navbar bg="dark" variant="dark" id="app-header">

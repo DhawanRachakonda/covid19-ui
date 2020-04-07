@@ -108,8 +108,8 @@ function PlaceListOnMap({ placeList }: IPlaceListOnMapProps) {
 
 function MapView() {
   const [center, setCenter] = React.useState<[number, number]>([
-    17.385,
-    78.4867
+    20.5937,
+    78.9629
   ]);
 
   React.useEffect(() => {
@@ -120,6 +120,7 @@ function MapView() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(setPosition);
     } else {
+      setCenter([17.385, 78.4867]);
       alert(
         'Geolocation is not supported by this browser. It is used to get your current location.'
       );
@@ -132,8 +133,6 @@ function MapView() {
     opacityClassName
   }: any = useAppFormState();
   const dispatch = useAppDispatch();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [places, setPlaces] = React.useState<any>([]);
 
   React.useEffect(() => {
     fetch(process.env.REACT_APP_GET_INFECTED_LIST!)
