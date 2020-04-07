@@ -19,8 +19,47 @@ const initialState = {
   loginUserEmail: '',
   showRTG: false,
   reportCase: new ReportCase(),
-  isLoggedIn: UserService.isUserLoggedIn()
+  isLoggedIn: UserService.isUserLoggedIn(),
+  // Contains date and corresponding lat long. Note these lat long are floor based values,
+  //used for finding intersection with user visited places.
+  infectedListMap: new Map()
 };
+
+export const LAT_LONG_SEPARATOR = ':';
+
+function returnInfectedListMap(infectedList) {
+  const infectedListMap = new Map();
+  infectedList
+    .filter(
+      (infectedPlace) =>
+        infectedPlace.latitude &&
+        infectedPlace.longitude &&
+        infectedPlace.dateField
+    )
+    .forEach((infectedPlace) => {
+      const { latitude, longitude, dateField } = infectedPlace;
+
+      const refinedLat = Math.trunc(latitude / 10);
+      const refinedLong = Math.trunc(longitude / 10);
+
+      const refinedLatLongEntry = `${refinedLat}${LAT_LONG_SEPARATOR}${refinedLong}`;
+
+      if (infectedListMap.has(dateField)) {
+        const infectedLatsLongs = infectedListMap.get(dateField);
+
+        // Don't include duplicates
+        if (!infectedLatsLongs.includes(refinedLatLongEntry)) {
+          infectedLatsLongs.push(refinedLatLongEntry);
+          infectedListMap.set(dateField, infectedLatsLongs);
+        }
+      } else {
+        // create entry
+        infectedListMap.set(dateField, [refinedLatLongEntry]);
+      }
+    });
+
+  return infectedListMap;
+}
 
 function AppReducer(state, action) {
   switch (action.type) {
@@ -51,9 +90,13 @@ function AppReducer(state, action) {
         }
       };
     case 'SET_INFECTED_LIST':
+      const infectedListMap = action.payload.data
+        ? returnInfectedListMap(action.payload.data)
+        : new Map();
       return {
         ...state,
-        infectedList: action.payload.data
+        infectedList: action.payload.data,
+        infectedListMap
       };
 
     case 'SET_PLACES_VISITED':

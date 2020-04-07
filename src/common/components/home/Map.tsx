@@ -1,5 +1,9 @@
 import * as React from 'react';
-import { useAppFormState, useAppDispatch } from './AppContext';
+import {
+  useAppFormState,
+  useAppDispatch,
+  LAT_LONG_SEPARATOR
+} from './AppContext';
 import { Map, TileLayer, Marker, Popup, ZoomControl } from 'react-leaflet';
 import { Card } from 'react-bootstrap';
 import { DivIcon } from 'leaflet';
@@ -19,6 +23,13 @@ const RedIcon = new DivIcon({
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const BlueIcon = new DivIcon({
   html: `<svg class="bi bi-circle-fill" width="1em" height="1em"  viewBox="0 0 16 16" fill="blue" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="8" cy="8" r="8"/>
+</svg>`,
+  className: 'blue-icon'
+});
+
+const InfectedAreaIntersect = new DivIcon({
+  html: `<svg class="bi bi-circle-fill intersect" width="1em" height="1em"  viewBox="0 0 16 16" fill="blue" xmlns="http://www.w3.org/2000/svg">
   <circle cx="8" cy="8" r="8"/>
 </svg>`,
   className: 'blue-icon'
@@ -66,6 +77,7 @@ function PlaceInfo({
 
 function PlaceListOnMap({ placeList }: IPlaceListOnMapProps) {
   const [isPopupOpen, setIsPopupOpen] = React.useState<any>(null);
+  const { infectedListMap } = useAppFormState();
   const { filter } = useAppFormState();
 
   const onClosePopup = () => {
@@ -94,14 +106,36 @@ function PlaceListOnMap({ placeList }: IPlaceListOnMapProps) {
         .filter(
           (infectedPlace) => infectedPlace.latitude && infectedPlace.longitude
         )
-        .map((infectedPlace: any) => (
-          <Marker
-            key={infectedPlace.id}
-            position={[infectedPlace.latitude, infectedPlace.longitude]}
-            onClick={() => setPlaceInfo(infectedPlace)}
-            icon={infectedPlace.isFromInfectedList ? RedIcon : BlueIcon}
-          />
-        ))}
+        .map((infectedPlace: any) => {
+          if (infectedPlace.isFromInfectedList) {
+            return (
+              <Marker
+                key={infectedPlace.id}
+                position={[infectedPlace.latitude, infectedPlace.longitude]}
+                onClick={() => setPlaceInfo(infectedPlace)}
+                icon={RedIcon}
+              />
+            );
+          } else {
+            // calculate whether it is intersection.
+            let isIntersected = false;
+            if (infectedListMap.has(infectedPlace.dateField)) {
+              const refinedLat = Math.trunc(infectedPlace.latitude / 10);
+              const refinedLong = Math.trunc(infectedPlace.longitude / 10);
+              isIntersected = infectedListMap
+                .get(infectedPlace.dateField)
+                .includes(`${refinedLat}${LAT_LONG_SEPARATOR}${refinedLong}`);
+            }
+            return (
+              <Marker
+                key={infectedPlace.id}
+                position={[infectedPlace.latitude, infectedPlace.longitude]}
+                onClick={() => setPlaceInfo(infectedPlace)}
+                icon={isIntersected ? InfectedAreaIntersect : BlueIcon}
+              />
+            );
+          }
+        })}
     </React.Fragment>
   );
 }
