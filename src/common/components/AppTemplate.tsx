@@ -8,9 +8,9 @@ import {
   Form,
   Button
 } from 'react-bootstrap';
-import {MdFileUpload} from 'react-icons/md';
+import { MdFileUpload } from 'react-icons/md';
 import AppLogin from './login/AppLogin';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import UserService from '../../services/user-services';
 import { FailureToaster } from './toaster/SuccessToaster';
 import paths from '../../routes/paths';
@@ -63,11 +63,20 @@ function UserOptions({ onLoginRequired }: any) {
     onLoginRequired();
   };
 
+  const { formatMessage } = useIntl();
+
   return (
     <React.Fragment>
       <Nav className="mr-auto">
-        <Nav.Link href={paths.uploadGoogleTakeOut.routeLink} className="upload-places-header-link">
-          <MdFileUpload size="28px"/><FormattedMessage id="app.uploadGoogleTakeout.link" />
+        <Nav.Link
+          title={formatMessage({
+            id: 'help.uploadFileFromGoogleTakeOut.toolTip'
+          })}
+          href={paths.uploadGoogleTakeOut.routeLink}
+          className="upload-places-header-link"
+        >
+          <MdFileUpload size="28px" />
+          <FormattedMessage id="app.uploadGoogleTakeout.link" />
         </Nav.Link>
       </Nav>
       <Nav className="justify-content-end" activeKey="/home">
