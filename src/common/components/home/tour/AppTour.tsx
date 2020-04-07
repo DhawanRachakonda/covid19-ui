@@ -22,6 +22,10 @@ function AppTour() {
     history.push(paths.uploadGoogleTakeOut.link);
   };
 
+  const handleClose = () => {
+    setShow(false);
+  };
+
   return (
     <Modal
       size="lg"
@@ -47,7 +51,6 @@ function AppTour() {
             <FormattedMessage id="app.uploadVisitedPlaces.btn" />
           </Button>
         </p>
-        
       </Modal.Body>
     </Modal>
   );
