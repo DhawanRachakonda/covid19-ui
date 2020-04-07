@@ -6,7 +6,7 @@ import AppTour from './tour/AppTour';
 
 export default () => {
   return (
-    <UploadVisitedPlacesContextProder>
+    <UploadVisitedPlacesContextProder bindedFor="home">
       {!localStorage.userTookTour && <AppTour />}
       <Map />
       {/* <div> 

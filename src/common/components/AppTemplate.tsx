@@ -9,6 +9,8 @@ import {
   Button
 } from 'react-bootstrap';
 import { MdFileUpload } from 'react-icons/md';
+import { BroadcastChannel } from 'broadcast-channel';
+
 import AppLogin from './login/AppLogin';
 import { FormattedMessage, useIntl } from 'react-intl';
 import UserService from '../../services/user-services';
@@ -17,6 +19,8 @@ import paths from '../../routes/paths';
 import Loader from './loaders';
 import { UserProvider, useUserState } from './providers/UserProvider';
 import { useAppDispatch, useAppFormState } from './home/AppContext';
+
+const loginEventsChannel = new BroadcastChannel('login-events');
 
 interface IAdminTemplateProps {
   children: React.ReactNode;
@@ -269,6 +273,22 @@ function AppTemplate({ children, isSecure }: IAppTemplateProps) {
     });
   };
 
+  const loginEventsListener = (msg: string) => {
+    console.log('Received message : ', msg);
+    if (msg === 'loginRequired') {
+      onLogout();
+      onLoginRequired();
+    }
+  };
+
+  React.useEffect(() => {
+    loginEventsChannel.addEventListener('message', loginEventsListener);
+
+    return () => {
+      loginEventsChannel.removeEventListener('message', loginEventsListener);
+    };
+  });
+
   if (isLoggedIn) {
     const isAdmin = UserService.isAdmin();
     return (
@@ -301,14 +321,11 @@ function AppTemplate({ children, isSecure }: IAppTemplateProps) {
   }
   return (
     <React.Fragment>
-      <Navbar bg="dark" variant="dark" id="app-header">
-        <Navbar.Brand href="/">
-          <FormattedMessage id="app.name" />
-        </Navbar.Brand>
-      </Navbar>
-      {(isLoginRequired || isSecure) && (
-        <LoginPopup onSuccess={onSuccess} onHide={onHide} />
-      )}
+      <Template specificTemplate={<div></div>}>
+        {(isLoginRequired || isSecure) && (
+          <LoginPopup onSuccess={onSuccess} onHide={onHide} />
+        )}
+      </Template>
     </React.Fragment>
   );
 }

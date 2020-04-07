@@ -1,5 +1,9 @@
+import { BroadcastChannel } from 'broadcast-channel';
+
 import { LOGIN_REQUIRED } from '../constants';
 import FetchUtil from '../util/fetch';
+
+const loginEventsChannel = new BroadcastChannel('login-events');
 
 export default class UserService {
   static getUserDate() {
@@ -34,6 +38,9 @@ export default class UserService {
     );
     if (FetchUtil.isResponseOkay(response)) {
       return response.json();
+    } else if (FetchUtil.isResponseInsufficientPrivilleges(response)) {
+      loginEventsChannel.postMessage('Invalid Credentials!');
+      return Promise.resolve(false);
     }
     return Promise.resolve({});
   }
