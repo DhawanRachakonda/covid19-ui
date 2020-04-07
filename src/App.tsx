@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-datepicker/dist/react-datepicker.css';
 
 import routes from './routes/routesconfig';

@@ -1,13 +1,23 @@
 .app-tour {
+  h2 {
+    font-family: HoneywellSansWeb-Bold;
+  }
+
+  .app-tour--close {
+    float: right;
+    cursor: pointer;
+    height: 20px;
+  }
+
   .modal-dialog {
     margin-left: 8rem !important;
-    
+
     .modal-content {
       background-clip: padding-box;
       border: none;
       border-radius: 0;
-      background-color: #0A244E;
-      opacity: 0.85;
+      background-color: #0a244e;
+      opacity: 85%;
       color: white;
       width: 20rem;
 
@@ -25,13 +35,22 @@
       }
 
       .modal-body {
-        .safe {
-          font-weight: bolder;
+        h2 {
+          span {
+            font-weight: bolder;
+          }
         }
 
         .description {
           margin-top: 1rem;
           font-size: smaller;
+
+          article {
+            section p {
+              font-size: 12px;
+              font-family: HoneywellSansWeb-Bold;
+            }
+          }
         }
 
         .custom-file {
@@ -48,8 +67,4 @@
       }
     }
   }
-}
-
-.backdrop-class-name {
-  opacity: 0!important;
 }

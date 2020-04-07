@@ -5,6 +5,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { IntlProvider } from 'react-intl';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import App from './App';

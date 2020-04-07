@@ -1,5 +1,6 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import { MdClose } from 'react-icons/md';
 
 import './AppTour.scss';
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
@@ -29,9 +30,14 @@ function AppTour() {
       centered
       show={show}
       onHide={onHide}
-      backdropClassName="backdrop-class-name"
+      backdropClassName="opacity-none"
     >
       <Modal.Body>
+        <MdClose
+          size="30px"
+          className="app-tour--close"
+          onClick={handleClose}
+        />
         <FormattedHTMLMessage id="appTour.heading" />
         <p className="description justify-content-center">
           <FormattedHTMLMessage id="appTour.message.description" />

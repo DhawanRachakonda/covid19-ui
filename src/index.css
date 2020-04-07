@@ -1,15 +1,96 @@
+@font-face {
+  font-family: 'HoneywellSansWeb-Light';
+  src: local('HoneywellSansWeb-Light'),
+    url(./fonts/HoneywellSansWeb-Light.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'HoneywellSansWeb-Black';
+  src: local('HoneywellSansWeb-Black'),
+    url(./fonts/HoneywellSansWeb-Black.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'HoneywellSansWeb-BlackItalic';
+  src: local('HoneywellSansWeb-BlackItalic'),
+    url(./fonts/HoneywellSansWeb-BlackItalic.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'HoneywellSansWeb-Bold';
+  src: local('HoneywellSansWeb-Bold'),
+    url(./fonts/HoneywellSansWeb-Bold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'HoneywellSansWeb-BoldItalic';
+  src: local('HoneywellSansWeb-BoldItalic'),
+    url(./fonts/HoneywellSansWeb-BoldItalic.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'HoneywellSansWeb-Book';
+  src: local('HoneywellSansWeb-Book'),
+    url(./fonts/HoneywellSansWeb-Book.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'HoneywellSansWeb-BookItalic';
+  src: local('HoneywellSansWeb-BookItalic'),
+    url(./fonts/HoneywellSansWeb-BookItalic.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'HoneywellSansWeb-Extrabold';
+  src: local('HoneywellSansWeb-Extrabold'),
+    url(./fonts/HoneywellSansWeb-Extrabold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'HoneywellSansWeb-ExtraboldItalic';
+  src: local('HoneywellSansWeb-ExtraboldItalic'),
+    url(./fonts/HoneywellSansWeb-ExtraboldItalic.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'HoneywellSansWeb-LightItalic';
+  src: local('HoneywellSansWeb-LightItalic'),
+    url(./fonts/HoneywellSansWeb-LightItalic.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'HoneywellSansWeb-Medium';
+  src: local('HoneywellSansWeb-Medium'),
+    url(./fonts/HoneywellSansWeb-Medium.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'HoneywellSansWeb-MediumItalic';
+  src: local('HoneywellSansWeb-MediumItalic'),
+    url(./fonts/HoneywellSansWeb-MediumItalic.ttf) format('ttf');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    sans-serif, 'HoneywellSansWeb-Light', 'HoneywellSansWeb-Black',
+    'HoneywellSansWeb-BlackItalic', 'HoneywellSansWeb-Bold',
+    'HoneywellSansWeb-BoldItalic', 'HoneywellSansWeb-Book',
+    'HoneywellSansWeb-BookItalic', 'HoneywellSansWeb-Extrabold',
+    'HoneywellSansWeb-ExtraboldItalic', 'HoneywellSansWeb-LightItalic',
+    'HoneywellSansWeb-Medium';
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.brand-name h2 {
+  font-family: HoneywellSansWeb-Bold;
+  font-size: 19px;
+  display: inline-block;
 }
 
 .pull-right {
@@ -151,18 +232,22 @@ code {
 }
 
 #app-header {
-  background-color: #0A244E !important;
+  background-color: #0a244e !important;
 }
 
 .circle {
   height: 3rem;
   width: 3rem;
-  background-color: #0A244E;
+  background-color: #0a244e;
   border-radius: 50%;
   display: block;
-  opacity: 0.85;
+  opacity: 85%;
 }
 
 .center {
   margin: auto;
+}
+
+.opacity-none {
+  opacity: 0 !important;
 }

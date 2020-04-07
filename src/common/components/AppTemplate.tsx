@@ -89,7 +89,6 @@ function UserOptions({ onLoginRequired }: any) {
             <FormattedMessage id="app.adminLogin.btn" />
           </Button>
         </Nav.Item>
-        
       </Nav>
     </React.Fragment>
   );
@@ -119,13 +118,15 @@ export function Template({ children, specificTemplate }: ITemplateProps) {
   return (
     <React.Fragment>
       <Navbar bg="dark" variant="dark" id="app-header">
-        <Navbar.Brand href="/">
+        <Navbar.Brand className="brand-name" href="/">
           <img
             alt="Incubation Tracker"
             src="/images/favicon-32X32.png"
             style={{ marginRight: '0.5em' }}
           />
-          <FormattedMessage id="app.name" />
+          <h2>
+            <FormattedMessage id="app.name" />
+          </h2>
         </Navbar.Brand>
         {specificTemplate}
       </Navbar>
@@ -299,8 +300,10 @@ function AppTemplate({ children, isSecure }: IAppTemplateProps) {
   return (
     <React.Fragment>
       <Navbar bg="dark" variant="dark" id="app-header">
-        <Navbar.Brand href="/">
-          <FormattedMessage id="app.name" />
+        <Navbar.Brand className="brand-name" href="/">
+          <h2>
+            <FormattedMessage id="app.name" />
+          </h2>
         </Navbar.Brand>
       </Navbar>
       {(isLoginRequired || isSecure) && (
