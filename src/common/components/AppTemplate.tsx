@@ -19,6 +19,11 @@ import paths from '../../routes/paths';
 import Loader from './loaders';
 import { UserProvider, useUserState } from './providers/UserProvider';
 import { useAppDispatch, useAppFormState } from './home/AppContext';
+import {
+  INVALID_CRED_KEY,
+  SERVER_ERROR_KEY,
+  LOGIN_REQUIRED
+} from '../../constants';
 
 const loginEventsChannel = new BroadcastChannel('login-events');
 
@@ -147,7 +152,7 @@ interface ILoginPopupProps {
 }
 
 function LoginPopup({ onSuccess, onHide, ...rest }: ILoginPopupProps) {
-  const [isError, setIsError] = React.useState(false);
+  const [error, setError] = React.useState({ isError: false, message: '' });
   const [isFormInvalid, setIsFormInvalid] = React.useState(false);
   const [isAuthenticating, setIsAuthenticating] = React.useState(false);
 
@@ -159,7 +164,7 @@ function LoginPopup({ onSuccess, onHide, ...rest }: ILoginPopupProps) {
       e.target.form.elements.password.value
     ) {
       try {
-        setIsError(false);
+        setError({ isError: false, message: '' });
         setIsAuthenticating(true);
         const response = await UserService.login(
           e.target.form.elements.username.value,
@@ -168,9 +173,12 @@ function LoginPopup({ onSuccess, onHide, ...rest }: ILoginPopupProps) {
         if (response.username) {
           UserService.saveUserToken(response);
           onSuccess();
-        } else {
-          setIsError(true);
-          setTimeout(() => setIsError(false), 3000);
+        } else if (response[INVALID_CRED_KEY] === true) {
+          setError({ isError: true, message: 'Invalid Credentials' });
+          setTimeout(() => setError({ isError: false, message: '' }), 3000);
+        } else if (response[SERVER_ERROR_KEY] === true) {
+          setError({ isError: true, message: 'Internal Server Error' });
+          setTimeout(() => setError({ isError: false, message: '' }), 3000);
         }
       } finally {
         setIsAuthenticating(false);
@@ -183,7 +191,7 @@ function LoginPopup({ onSuccess, onHide, ...rest }: ILoginPopupProps) {
 
   return (
     <React.Fragment>
-      {isError && <FailureToaster message="Invalid username or password" />}
+      {error.isError && <FailureToaster message={error.message} />}
       {isFormInvalid && (
         <FailureToaster message="All FIelds are required fields" />
       )}
@@ -275,7 +283,7 @@ function AppTemplate({ children, isSecure }: IAppTemplateProps) {
 
   const loginEventsListener = (msg: string) => {
     console.log('Received message : ', msg);
-    if (msg === 'loginRequired') {
+    if (msg === LOGIN_REQUIRED) {
       onLogout();
       onLoginRequired();
     }

@@ -9,13 +9,15 @@ app.use(cors());
 app.all('/api/*/*/:fileName', (req, res) => {
   const methodName = req.method.toLowerCase();
   const response = require(`./mocks/${methodName}_${req.params.fileName}.json`);
-  res.json(response);
+  res.sendStatus(500);
+  //res.json(response);
 });
 
 app.post('/:fileName', (req, res) => {
   const methodName = req.method.toLowerCase();
   const response = require(`./mocks/${methodName}_${req.params.fileName}.json`);
-  res.json(response);
+  res.sendStatus(500);
+  //res.json(response);
 });
 
 // eslint-disable-next-line no-console

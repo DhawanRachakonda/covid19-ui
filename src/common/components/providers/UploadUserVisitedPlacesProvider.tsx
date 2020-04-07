@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAppDispatch } from '../home/AppContext';
+import { SCALAR_E7 } from '../../../constants';
 
 declare type UserUploadVisitedPlacesType = {
   setIsFetchingVisitPlaces:
@@ -24,8 +25,6 @@ const initialContext: UserUploadVisitedPlacesType = {
     bindedFor: ''
   }
 };
-
-const SCALAR_E7 = 0.0000001;
 
 const UploadUserVisitedPlacesContext = React.createContext(initialContext);
 

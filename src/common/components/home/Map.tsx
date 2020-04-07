@@ -12,6 +12,9 @@ import './Map.css';
 
 import MapControl from './MapControl';
 import { FormattedMessage } from 'react-intl';
+import { client } from '../../../util/fetch';
+import { SERVER_ERROR_KEY } from '../../../constants';
+import { FailureToaster } from '../toaster/SuccessToaster';
 
 const RedIcon = new DivIcon({
   html: `<svg class="bi bi-circle-fill" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +120,7 @@ function PlaceListOnMap({ placeList }: IPlaceListOnMapProps) {
               />
             );
           } else {
-            // calculate whether it is intersection.
+            // calculate whether it is intersecting.
             let isIntersected = false;
             if (infectedListMap.has(infectedPlace.dateField)) {
               const refinedLat = Math.trunc(infectedPlace.latitude / 10);
@@ -168,24 +171,49 @@ function MapView() {
   }: any = useAppFormState();
   const dispatch = useAppDispatch();
 
+  const [errorObject, setErrorObject] = React.useState({
+    isError: false,
+    errorMessage: ''
+  });
+
   React.useEffect(() => {
-    fetch(process.env.REACT_APP_GET_INFECTED_LIST!)
-      .then((response) => response.json())
-      .then((data) => {
-        data.forEach((result: any) => {
-          result.isFromInfectedList = true; // eslint-disable-line no-param-reassign
-        });
-        dispatch({
-          type: 'SET_INFECTED_LIST',
-          payload: {
-            data
-          }
-        });
+    async function getInfectedList(callback: (successResponse: any) => void) {
+      try {
+        const response = await client(process.env.REACT_APP_GET_INFECTED_LIST!);
+        if (response[SERVER_ERROR_KEY]) {
+          setErrorObject({
+            isError: true,
+            errorMessage: 'Internal Server Error'
+          });
+        } else {
+          callback(response);
+        }
+      } catch (error) {
+        setErrorObject({ isError: true, errorMessage: 'Something went wrong' });
+      }
+    }
+
+    function successCallBack(data: any) {
+      data.forEach((result: any) => {
+        result.isFromInfectedList = true; // eslint-disable-line no-param-reassign
       });
+      dispatch({
+        type: 'SET_INFECTED_LIST',
+        payload: {
+          data
+        }
+      });
+    }
+
+    setErrorObject({ isError: false, errorMessage: '' });
+    getInfectedList(successCallBack);
   }, [dispatch]);
 
   return (
     <React.Fragment>
+      {errorObject.isError && (
+        <FailureToaster message={errorObject.errorMessage} />
+      )}
       <Map
         center={center}
         zoomControl={false}
