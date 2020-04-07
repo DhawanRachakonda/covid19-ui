@@ -19,6 +19,7 @@ export default {
     'app.showInstructions': 'Show Instructions',
     'app.hideInstructions': 'Hide Instructions',
     'app.isFetchingVisitPlaces': 'Fetching your visited places to plot on Map.',
+    'app.uploadVisitedPlaces.btn': 'Upload Visited Places',
     'help.uploadfile.pastweeks':
       'Upload data of 3 weeks prior to the date of infection',
     'help.uploadfileFromGoogle.jist': 'Use Google Takeout',

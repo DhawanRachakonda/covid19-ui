@@ -1,15 +1,13 @@
 import React from 'react';
-import { Modal, Button, Form } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 
 import './AppTour.scss';
-import { FormattedHTMLMessage } from 'react-intl';
-import { useUploadUserVisitedPlaces } from '../../providers/UploadUserVisitedPlacesProvider';
-import SuccessToaster, { FailureToaster } from '../../toaster/SuccessToaster';
+import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
+import { useHistory } from 'react-router-dom';
+import paths from '../../../../routes/paths';
 
 function AppTour() {
   const [show, setShow] = React.useState(true);
-
-  
 
   const handleClose = () => setShow(false);
 
@@ -18,13 +16,12 @@ function AppTour() {
     setShow(false);
   };
 
-  const fileInput = React.useRef<any>({});
+  const history = useHistory();
 
-  const {
-    errorObject,
-    isFetchingVisitPlaces,
-    uploadVisitedPlaces
-  } = useUploadUserVisitedPlaces();
+  const onUploadVisitedPlaces = (e: any) => {
+    onHide();
+    history.push(paths.uploadGoogleTakeOut.link);
+  };
 
   return (
     <Modal
@@ -35,36 +32,20 @@ function AppTour() {
       show={show}
       onHide={onHide}
     >
-      
-      <Modal.Body >
+      <Modal.Body>
         <FormattedHTMLMessage id="appTour.heading" />
         <p className="description">
           <FormattedHTMLMessage id="appTour.message.description" />
         </p>
         <p className="d-flex justify-content-center">
-          <Form.File custom>
-            {isFetchingVisitPlaces && (
-              <SuccessToaster message="app.isFetchingVisitPlaces" />
-            )}
-            {errorObject.isErrorOccurred && (
-              <FailureToaster message={errorObject.errorMessage} />
-            )}
-            <Form.File.Input
-              ref={fileInput}
-              isValid
-              accept=".json"
-              onChange={(e: any) => {
-                uploadVisitedPlaces(e);
-                onHide();
-              }}
-            />
-            
-            <Button variant="light" onClick={() => fileInput.current.click()}>
-              Upload Visited Places
-            </Button><br/>
-            <Button variant="light" onClick={handleClose} style={{marginLeft:'4em'}}>Close</Button>
-            
-          </Form.File>
+          <Button variant="light" onClick={onUploadVisitedPlaces}>
+            <FormattedMessage id="app.uploadVisitedPlaces.btn" />
+          </Button>
+        </p>
+        <p className="d-flex justify-content-center">
+          <Button variant="light" className="btn-close" onClick={handleClose}>
+            <FormattedMessage id="app.closeButton" />
+          </Button>
         </p>
       </Modal.Body>
     </Modal>
