@@ -119,6 +119,13 @@ function uploadFromGoogleTakeOutToolTip({ ...rest }) {
 }
 
 function UploadFromGoogle() {
+
+  const [displayValue,setDisplayValue] = React.useState('block');
+  const handleClick = (e) =>{
+    e.preventDefault();
+    setDisplayValue('none');
+  }
+
   return (
     <div style={{ marginTop: '2.5rem' }}>
       <p className="how-takout--works">
@@ -131,6 +138,7 @@ function UploadFromGoogle() {
             target="_blank"
             className="color-black"
             href="https://takeout.google.com/"
+            onClick={handleClick}
           >
             <MdFileUpload style={{ fontSize: 60 }} />
           </a>
@@ -142,7 +150,9 @@ function UploadFromGoogle() {
           <FormattedMessage id="help.googleTakeOut.instructions" />
         </a>
       </p>
+      <div className="upload-forms" style={{display:displayValue}}>
       <UploadFiles></UploadFiles>
+      </div>
     </div>
   );
 }

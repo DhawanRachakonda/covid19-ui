@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import UserService from '../../../services/user-services';
 import DatePicker from 'react-datepicker';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button,Card } from 'react-bootstrap';
 
 function UploadFiles() {
   const [dateOfSusInf, setDateOfSusInf] = React.useState(new Date());
@@ -40,8 +40,11 @@ function UploadFiles() {
 
   return (
     <div className="UploadFiles">
-      <Form>
-        <Form.Group controlId="formBasicEmail">
+      <Card className="upload-card">
+        
+      <Form style={{margin: '1em'}}>
+        <h2>Upload</h2>
+        <Form.Group>
           <Form.Label>Infected Date</Form.Label>
           <br />
           <DatePicker
@@ -55,8 +58,8 @@ function UploadFiles() {
             Please enter the date on which the person is tested covid positive
           </Form.Text>
         </Form.Group>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Choose a json file to upload</Form.Label>
+        <Form.Group>
+          <Form.Label>Upload JSON File</Form.Label>
           <br />
 
           <input
@@ -73,6 +76,7 @@ function UploadFiles() {
           Submit
         </Button>
       </Form>
+      </Card>
     </div>
   );
 }
