@@ -1,19 +1,21 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Control from 'react-leaflet-control';
-import { OverlayTrigger, Tooltip, Form, Modal, Button } from 'react-bootstrap';
+import { OverlayTrigger, Tooltip, Form, Badge } from 'react-bootstrap';
 import {
   MdFullscreenExit,
   MdFullscreen,
   MdFileUpload,
-  MdFilterList,
   MdReportProblem,
-  MdRefresh
+  MdRefresh,
+  MdDateRange
 } from 'react-icons/md';
 import { FormattedMessage } from 'react-intl';
+import DatePicker from 'react-datepicker';
+
+import './MapControl.scss';
 
 import SuccessToaster, { FailureToaster } from '../toaster/SuccessToaster';
 import { useAppDispatch, useAppFormState } from './AppContext';
-import ApplyFilter from './AppFilter';
 import AppRTG from '../report/AppRTG';
 import { useUploadUserVisitedPlaces } from '../providers/UploadUserVisitedPlacesProvider';
 
@@ -41,9 +43,9 @@ function reportACase({ ...rest }) {
   );
 }
 
-function applyFiltersOnMap({ ...rest }) {
+function ApplyFiltersOnMap({ className = 'show-tooltip', ...rest }) {
   return (
-    <Tooltip {...rest}>
+    <Tooltip className={`filter-date--tool-tip ${className}`} {...rest}>
       <FormattedMessage id="app.filters.info" />
     </Tooltip>
   );
@@ -134,19 +136,9 @@ function UploadFileIcon() {
 }
 
 function FilterList() {
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
-
   const dispatch = useAppDispatch();
 
   const { filter } = useAppFormState();
-
-  const applyFilter = (e) => {
-    e.preventDefault();
-    setIsModalOpen(!isModalOpen);
-    dispatch({
-      type: 'APPLY_FILTER'
-    });
-  };
 
   const reset = (e) => {
     dispatch({
@@ -154,48 +146,66 @@ function FilterList() {
     });
   };
 
+  const applyFilter = () => {
+    dispatch({
+      type: 'APPLY_FILTER'
+    });
+  };
+
+  const setSelectedDate = (date) => {
+    dispatch({
+      type: 'SET_DATE',
+      payload: {
+        value: date
+      }
+    });
+  };
+
+  const { selectedDate } = useAppFormState();
+
+  const onChangeDate = (date) => {
+    setIsDatePickerOpen(!isDatePickerOpen);
+    setSelectedDate(date);
+    applyFilter();
+  };
+
+  const datePickerRef = React.useRef(null);
+
+  const [isDatePickerOpen, setIsDatePickerOpen] = React.useState(false);
+
+  const onIconClick = () => {
+    document.querySelector('.filter-date--tool-tip').style.display = 'none';
+    datePickerRef.current.setOpen(!isDatePickerOpen);
+    setIsDatePickerOpen(!isDatePickerOpen);
+  };
+
   return (
     <React.Fragment>
-      <Modal
-        size="sm"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-        show={isModalOpen}
-        onHide={() => setIsModalOpen(!isModalOpen)}
-      >
-        <Form>
-          <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title-vcenter">
-              <FormattedMessage id="app.applyFiltersOnMap" />
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <ApplyFilter />
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="primary" type="submit" onClick={applyFilter}>
-              <FormattedMessage id="app.applyFiltersOnMap.btn" />
-            </Button>
-            <Button variant="secondary" type="reset" onClick={reset}>
-              <FormattedMessage id="app.applyFiltersOnMap.resetBtn" />
-            </Button>
-          </Modal.Footer>
-        </Form>
-      </Modal>
-      <OverlayTrigger
-        placement="left"
-        delay={{ show: 250, hide: 400 }}
-        overlay={applyFiltersOnMap}
-      >
-        <div className="circle margin-top--1_5">
-          <MdFilterList
-            onClick={() => setIsModalOpen(!isModalOpen)}
-            className="filter-icon center display-block"
-            color="white"
-            style={{ fontSize: 30 }}
-          />
-        </div>
-      </OverlayTrigger>
+      <div className="filter-date--picker-wrapper">
+        <OverlayTrigger
+          className="filter-date--tooltip"
+          placement="left"
+          delay={{ show: 250, hide: 400 }}
+          overlay={ApplyFiltersOnMap}
+        >
+          <div className="circle margin-top--1_5">
+            <DatePicker
+              ref={datePickerRef}
+              className="filter-date-picker"
+              selected={selectedDate}
+              onChange={onChangeDate}
+              maxDate={new Date()}
+            />
+            <MdDateRange
+              onClick={onIconClick}
+              className="filter-icon center display-block"
+              color="white"
+              style={{ fontSize: 30 }}
+            />
+          </div>
+        </OverlayTrigger>
+      </div>
+
       {filter.date && (
         <OverlayTrigger
           placement="left"
@@ -247,58 +257,76 @@ function ReportProblem() {
   );
 }
 
+function TopFilters() {
+  const { filter } = useAppFormState();
+
+  return (
+    <Control position="topleft" className="map-control--filters-top">
+      {filter.date && (
+        <Badge pill className="filter-badge" variant="primary">
+          <FormattedMessage id="app.filtersOnMap.dateFilter.on" />
+          <span className="date-filter--str">{filter.dateStr}</span>
+        </Badge>
+      )}
+    </Control>
+  );
+}
+
 export default function MapControls() {
   const [isFullScreenEnabled, setIsFullScreenEnabled] = React.useState(false);
 
   return (
-    <Control position="topright">
-      {!isFullScreenEnabled && (
-        <OverlayTrigger
-          placement="left"
-          delay={{ show: 250, hide: 400 }}
-          overlay={enableFullScreen}
-        >
-          <div className="circle">
-            <MdFullscreen
-              className="full-screen display-block center filter-icon"
-              style={{ fontSize: 30 }}
-              color="white"
-              onClick={() => {
-                document
-                  .querySelector('.infected-list--map')
-                  .requestFullscreen();
-                setIsFullScreenEnabled(!isFullScreenEnabled);
-              }}
-            />
-          </div>
-        </OverlayTrigger>
-      )}
-      {isFullScreenEnabled && (
-        <OverlayTrigger
-          placement="left"
-          delay={{ show: 250, hide: 400 }}
-          overlay={disableFullScreen}
-        >
-          <div className="circle">
-            <MdFullscreenExit
-              className="full-screen--exit display-block center filter-icon"
-              style={{ fontSize: 30 }}
-              color="white"
-              onClick={() => {
-                document.exitFullscreen();
-                setIsFullScreenEnabled(!isFullScreenEnabled);
-              }}
-            />
-          </div>
-        </OverlayTrigger>
-      )}
+    <React.Fragment>
+      <Control position="topright" className="map-control--filters-right">
+        {!isFullScreenEnabled && (
+          <OverlayTrigger
+            placement="left"
+            delay={{ show: 250, hide: 400 }}
+            overlay={enableFullScreen}
+          >
+            <div className="circle">
+              <MdFullscreen
+                className="full-screen display-block center filter-icon"
+                style={{ fontSize: 30 }}
+                color="white"
+                onClick={() => {
+                  document
+                    .querySelector('.infected-list--map')
+                    .requestFullscreen();
+                  setIsFullScreenEnabled(!isFullScreenEnabled);
+                }}
+              />
+            </div>
+          </OverlayTrigger>
+        )}
+        {isFullScreenEnabled && (
+          <OverlayTrigger
+            placement="left"
+            delay={{ show: 250, hide: 400 }}
+            overlay={disableFullScreen}
+          >
+            <div className="circle">
+              <MdFullscreenExit
+                className="full-screen--exit display-block center filter-icon"
+                style={{ fontSize: 30 }}
+                color="white"
+                onClick={() => {
+                  document.exitFullscreen();
+                  setIsFullScreenEnabled(!isFullScreenEnabled);
+                }}
+              />
+            </div>
+          </OverlayTrigger>
+        )}
 
-      {!isFullScreenEnabled && (
-        <React.Fragment>
-          {' '}
-          <UploadFileIcon /> <FilterList /> <ReportProblem />
-        </React.Fragment>
-      )}
-    </Control>
+        {!isFullScreenEnabled && (
+          <React.Fragment>
+            {' '}
+            <UploadFileIcon /> <FilterList /> <ReportProblem />
+          </React.Fragment>
+        )}
+      </Control>
+      <TopFilters />
+    </React.Fragment>
   );
 }

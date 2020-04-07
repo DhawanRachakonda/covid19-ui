@@ -1,19 +1,18 @@
 export default {
   'en-US': {
     'app.name': 'Incubation Tracker',
-    'app.redIcon.describe': 'Infected Areas - Click on hotspots to show more information',
+    'app.redIcon.describe':
+      'Infected Areas - Click on hotspots to show more information',
     'app.blueIcon.describe': 'Places You Visited',
     'app.registerUserText': 'Register Admin',
     'app.registerAdmin': 'Register Admin',
     'app.loginHeader': 'Login',
     'app.closeButton': 'Close',
     'app.adminLogin.btn': 'Login As Admin',
-    'app.applyFiltersOnMap': 'Apply Filters On Map',
     'app.applyFiltersOnMap.clear': 'Clear all filters',
-    'app.applyFiltersOnMap.btn': 'Apply Filters',
     'app.applyFiltersOnMap.date.info':
       'This shows at which date places to be shown',
-    'app.applyFiltersOnMap.resetBtn': 'Reset',
+    'app.filtersOnMap.dateFilter.on': 'Date Filter applied On',
     'app,addAdmin.successMessage': 'Admin Created Successfully',
     'app.uploadInfectedPlaces': 'Upload Infected Data',
     'app.uploadGoogleTakeout.link': 'Upload Your Visited Places',
