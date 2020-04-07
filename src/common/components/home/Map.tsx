@@ -155,7 +155,7 @@ function MapView() {
       <Map
         center={center}
         zoomControl={false}
-        zoom={8}
+        zoom={16}
         className={`infected-list--map ${opacityClassName}`}
         animate={true}
       >
