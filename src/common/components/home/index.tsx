@@ -7,7 +7,7 @@ import AppTour from './tour/AppTour';
 export default () => {
   return (
     <UploadVisitedPlacesContextProder>
-      {<AppTour />}
+      {!localStorage.userTookTour && <AppTour />}
       <Map />
       {/* <div> 
         <Card className="text-center">

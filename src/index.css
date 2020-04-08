@@ -241,7 +241,7 @@ code {
   background-color: #0a244e;
   border-radius: 50%;
   display: block;
-  opacity: 85%;
+  opacity: 0.85;
 }
 
 .center {
