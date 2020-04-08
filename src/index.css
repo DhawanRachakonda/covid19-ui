@@ -80,6 +80,8 @@ body {
     'HoneywellSansWeb-BookItalic', 'HoneywellSansWeb-Extrabold',
     'HoneywellSansWeb-ExtraboldItalic', 'HoneywellSansWeb-LightItalic',
     'HoneywellSansWeb-Medium';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
