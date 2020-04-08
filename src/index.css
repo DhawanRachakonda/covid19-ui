@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
   font-family: 'HoneywellSansWeb-Light';
   src: local('HoneywellSansWeb-Light'),
     url(/fonts/HoneywellSansWeb-Light.ttf) format('ttf');
@@ -68,19 +68,18 @@
   font-family: 'HoneywellSansWeb-MediumItalic';
   src: local('HoneywellSansWeb-MediumItalic'),
     url(/fonts/HoneywellSansWeb-MediumItalic.ttf) format('ttf');
-} */
-/*'HoneywellSansWeb-Light', 'HoneywellSansWeb-Black',
-'HoneywellSansWeb-BlackItalic', 'HoneywellSansWeb-Bold',
-'HoneywellSansWeb-BoldItalic', 'HoneywellSansWeb-Book',
-'HoneywellSansWeb-BookItalic', 'HoneywellSansWeb-Extrabold',
-'HoneywellSansWeb-ExtraboldItalic', 'HoneywellSansWeb-LightItalic',
-'HoneywellSansWeb-Medium'*/
+}
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif ', HoneywellSansWeb-Light', 'HoneywellSansWeb-Black',
+    'HoneywellSansWeb-BlackItalic', 'HoneywellSansWeb-Bold',
+    'HoneywellSansWeb-BoldItalic', 'HoneywellSansWeb-Book',
+    'HoneywellSansWeb-BookItalic', 'HoneywellSansWeb-Extrabold',
+    'HoneywellSansWeb-ExtraboldItalic', 'HoneywellSansWeb-LightItalic',
+    'HoneywellSansWeb-Medium';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
