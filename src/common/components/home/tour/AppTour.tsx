@@ -8,7 +8,7 @@ import { useHistory } from 'react-router-dom';
 import paths from '../../../../routes/paths';
 
 function AppTour() {
-  const [show, setShow] = React.useState(true);
+  const [, setShow] = React.useState(true);
 
   const onHide = () => {
     localStorage.userTookTour = 'yes';
@@ -32,7 +32,7 @@ function AppTour() {
       aria-labelledby="contained-modal-title-vcenter"
       className="app-tour"
       centered
-      show={show}
+      show
       onHide={onHide}
       backdropClassName="opacity-none"
     >
