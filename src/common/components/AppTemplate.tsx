@@ -8,7 +8,7 @@ import {
   Form,
   Button
 } from 'react-bootstrap';
-
+import {MdFileUpload} from 'react-icons/md';
 import AppLogin from './login/AppLogin';
 import { FormattedMessage } from 'react-intl';
 import UserService from '../../services/user-services';
@@ -66,8 +66,8 @@ function UserOptions({ onLoginRequired }: any) {
   return (
     <React.Fragment>
       <Nav className="mr-auto">
-        <Nav.Link href={paths.uploadGoogleTakeOut.routeLink}>
-          <FormattedMessage id="app.uploadGoogleTakeout.link" />
+        <Nav.Link href={paths.uploadGoogleTakeOut.routeLink} className="upload-places-header-link">
+          <MdFileUpload size="28px"/><FormattedMessage id="app.uploadGoogleTakeout.link" />
         </Nav.Link>
       </Nav>
       <Nav className="justify-content-end" activeKey="/home">
