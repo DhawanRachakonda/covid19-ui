@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import moment from 'moment';
+
 import ReportCase from '../model/ReportCase';
 import UserService from '../../../services/user-services';
 
@@ -100,9 +102,24 @@ function AppReducer(state, action) {
       };
 
     case 'SET_PLACES_VISITED':
+      const twentyOneDaysBack = moment().subtract(21, 'd');
+      const currentDate = moment();
+      const placesVisited = action.payload.data
+        ? action.payload.data
+            .filter((data) => data.dateField)
+            .filter((data) => {
+              const dateVisited = moment(data.dateField, 'DD-MM-YYYY');
+              return dateVisited.isBetween(
+                twentyOneDaysBack,
+                currentDate,
+                null,
+                '[]'
+              );
+            })
+        : [];
       return {
         ...state,
-        placesVisited: action.payload.data
+        placesVisited
       };
 
     case 'RESET_PLACES_VISITED':
