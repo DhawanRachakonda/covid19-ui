@@ -9,7 +9,6 @@ import {
   Button
 } from 'react-bootstrap';
 import { MdFileUpload } from 'react-icons/md';
-import AppLogin from './login/AppLogin';
 import { FormattedMessage, useIntl } from 'react-intl';
 import UserService from '../../services/user-services';
 import { FailureToaster } from './toaster/SuccessToaster';
