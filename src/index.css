@@ -151,16 +151,16 @@ code {
 }
 
 #app-header {
-  background-color: #022351 !important;
+  background-color: #0A244E !important;
 }
 
 .circle {
   height: 3rem;
   width: 3rem;
-  background-color: #022351;
+  background-color: #0A244E;
   border-radius: 50%;
   display: block;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .center {
