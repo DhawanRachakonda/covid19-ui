@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import UserService from '../../../services/user-services';
 import DatePicker from 'react-datepicker';
-import { Form, Button,Card } from 'react-bootstrap';
+import { Form, Button, Card } from 'react-bootstrap';
 
 function UploadFiles() {
   const [dateOfSusInf, setDateOfSusInf] = React.useState(new Date());
@@ -31,7 +31,8 @@ function UploadFiles() {
 
   const [file, setFile] = useState(null);
 
-  function uploadWithFormData() {
+  function uploadWithFormData(e) {
+    e.preventDefault();
     const formData = new FormData();
     formData.append('files', [file]);
 
@@ -41,41 +42,40 @@ function UploadFiles() {
   return (
     <div className="UploadFiles">
       <Card className="upload-card">
-        
-      <Form style={{margin: '1em'}}>
-        <h2>Upload</h2>
-        <Form.Group>
-          <Form.Label>Infected Date</Form.Label>
-          <br />
-          <DatePicker
-            className="form-control"
-            selected={dateOfSusInf}
-            onChange={(date) => setDateOfSusInf(date)}
-            maxDate={new Date()}
-          />
+        <Form style={{ margin: '1em' }}>
+          <h2>Upload</h2>
+          <Form.Group>
+            <Form.Label>Infected Date</Form.Label>
+            <br />
+            <DatePicker
+              className="form-control"
+              selected={dateOfSusInf}
+              onChange={(date) => setDateOfSusInf(date)}
+              maxDate={new Date()}
+            />
 
-          <Form.Text className="text-muted">
-            Please enter the date on which the person is tested covid positive
-          </Form.Text>
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>Upload JSON File</Form.Label>
-          <br />
+            <Form.Text className="text-muted">
+              Please enter the date on which the person is tested covid positive
+            </Form.Text>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Upload JSON File</Form.Label>
+            <br />
 
-          <input
-            type="file"
-            name="file"
-            onChange={(e) => setFile(e.target.files[0])}
-          />
+            <input
+              type="file"
+              name="file"
+              onChange={(e) => setFile(e.target.files[0])}
+            />
 
-          <Form.Text className="text-muted">
-            File format should be *.json
-          </Form.Text>
-        </Form.Group>
-        <Button variant="primary" type="submit" onClick={uploadWithFormData}>
-          Submit
-        </Button>
-      </Form>
+            <Form.Text className="text-muted">
+              File format should be *.json
+            </Form.Text>
+          </Form.Group>
+          <Button variant="primary" type="submit" onClick={uploadWithFormData}>
+            Submit
+          </Button>
+        </Form>
       </Card>
     </div>
   );
