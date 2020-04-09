@@ -1,8 +1,7 @@
 .app-tour {
-
   .modal-dialog {
     margin-left: 8rem !important;
-
+    
     .modal-content {
       background-clip: padding-box;
       border: none;
@@ -50,7 +49,7 @@
     }
   }
 }
-.modal-backdrop.show {
-    
-  opacity:0!important;
-  }
+
+.backdrop-class-name {
+  opacity: 0!important;
+}

@@ -31,6 +31,7 @@ function AppTour() {
       centered
       show={show}
       onHide={onHide}
+      backdropClassName="backdrop-class-name"
     >
       <Modal.Body>
         <FormattedHTMLMessage id="appTour.heading" />
@@ -42,11 +43,7 @@ function AppTour() {
             <FormattedMessage id="app.uploadVisitedPlaces.btn" />
           </Button>
         </p>
-        <p className="d-flex justify-content-center">
-          <Button variant="light" className="btn-close" onClick={handleClose}>
-            <FormattedMessage id="app.closeButton" />
-          </Button>
-        </p>
+        
       </Modal.Body>
     </Modal>
   );
