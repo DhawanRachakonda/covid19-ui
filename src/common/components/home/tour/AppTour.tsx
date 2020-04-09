@@ -9,8 +9,6 @@ import paths from '../../../../routes/paths';
 function AppTour() {
   const [show, setShow] = React.useState(true);
 
-  const handleClose = () => setShow(false);
-
   const onHide = () => {
     localStorage.userTookTour = 'yes';
     setShow(false);
