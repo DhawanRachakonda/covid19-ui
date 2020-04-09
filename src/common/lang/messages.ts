@@ -1,6 +1,6 @@
 export default {
   'en-US': {
-    'app.name': 'Incubation Tracker',
+    'app.name': 'Covid 19 Incubation Tracker',
     'app.redIcon.describe':
       'Infected Areas - Click on hotspots to show more information',
     'app.blueIcon.describe': 'Places You Visited',
@@ -12,7 +12,7 @@ export default {
     'app.applyFiltersOnMap.clear': 'Clear all filters',
     'app.applyFiltersOnMap.date.info':
       'This shows at which date places to be shown',
-    'app.filtersOnMap.dateFilter.on': 'Date Filter applied On',
+    'app.filtersOnMap.dateFilter.on': 'Infected Areas On',
     'app,addAdmin.successMessage': 'Admin Created Successfully',
     'app.uploadInfectedPlaces': 'Upload Infected Data',
     'app.uploadGoogleTakeout.link': 'Upload Your Visited Places',

@@ -34,7 +34,7 @@ function AppTour() {
     >
       <Modal.Body>
         <FormattedHTMLMessage id="appTour.heading" />
-        <p className="description">
+        <p className="description justify-content-center">
           <FormattedHTMLMessage id="appTour.message.description" />
         </p>
         <p className="d-flex justify-content-center">

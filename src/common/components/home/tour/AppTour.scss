@@ -1,6 +1,7 @@
 .app-tour {
+
   .modal-dialog {
-    margin-left: 5rem !important;
+    margin-left: 8rem !important;
 
     .modal-content {
       background-clip: padding-box;
@@ -49,3 +50,7 @@
     }
   }
 }
+.modal-backdrop.show {
+    
+  opacity:0!important;
+  }

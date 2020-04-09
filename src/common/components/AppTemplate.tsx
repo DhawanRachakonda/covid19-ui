@@ -90,9 +90,7 @@ function UserOptions({ onLoginRequired }: any) {
             <FormattedMessage id="app.adminLogin.btn" />
           </Button>
         </Nav.Item>
-        <Nav.Item className="line-height--none">
-          <AppLogin />
-        </Nav.Item>
+        
       </Nav>
     </React.Fragment>
   );
