@@ -14,7 +14,7 @@ export default {
       'This shows at which date places to be shown',
     'app.filtersOnMap.dateFilter.on': 'Covid patient visited these place On',
     'app,addAdmin.successMessage': 'Admin Created Successfully',
-    'app.uploadInfectedPlaces': 'Upload Infected Data',
+    'app.uploadInfectedPlaces': 'Upload Paitent Location History',
     'app.uploadGoogleTakeout.link': 'Upload Your Visited Places',
     'app.showInstructions': 'Show Instructions',
     'app.hideInstructions': 'Hide Instructions',
