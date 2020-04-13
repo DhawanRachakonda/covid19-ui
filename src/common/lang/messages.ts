@@ -12,7 +12,7 @@ export default {
     'app.applyFiltersOnMap.clear': 'Clear all filters',
     'app.applyFiltersOnMap.date.info':
       'This shows at which date places to be shown',
-    'app.filtersOnMap.dateFilter.on': 'Infected Areas On',
+    'app.filtersOnMap.dateFilter.on': 'Covid patient visited these place On',
     'app,addAdmin.successMessage': 'Admin Created Successfully',
     'app.uploadInfectedPlaces': 'Upload Infected Data',
     'app.uploadGoogleTakeout.link': 'Upload Your Visited Places',
